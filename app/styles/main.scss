@@ -3,8 +3,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 @import "bourbon/bourbon";
-@import "variables.scss";
-@import "reset.scss";
+@import "_variables.scss";
+@import "_reset.scss";
+@import "main_dashboard.scss";
 
 html { font-size: 62.5%; }
 body {
@@ -12,8 +13,8 @@ body {
   margin: 0;
   overflow: auto;
   font-size: 1.4rem;
-  font-family: 'Open Sans', sans-serif;
-  background: #FAFAFA;
+  font-family: $font-openSans;
+  background: #eee;
 }
 
 
@@ -41,8 +42,8 @@ header {
   h1 {
     @extend .verticalAlign;
     font-size: 2.4rem;
-    color: $blue;
-    font-family: 'Montserrat', sans-serif;
+    color: rgba(0,0,0,0.8);
+    font-family: $font-montserrat;
     display: block;
     float: left;
     margin-top: auto;
@@ -51,96 +52,3 @@ header {
 }
 
 
-.dashboard {
-  margin-top: 50px;
-  nav.dashboard-tools {
-    display: inline-block;
-    margin-bottom: 50px;
-
-    & > div {
-      @extend .boxShadowGlobal;
-      height: 40px;
-      float: left;
-      &:not(:last-child){
-        margin-right: 10px;
-      }
-    }
-
-    .dashboard--search {
-      overflow: hidden;
-
-      label {
-        margin-bottom: 0;
-        i.fa {
-          color: rgba(0,0,0,0.2);
-          font-size: 2rem;
-          padding: 10px;
-          cursor: pointer;
-          @include transition(all 0.2s ease-out);
-        }
-
-        input {
-          width: 0px;
-          opacity: 0;
-          padding: 10px 0;
-          font-size: 1.6rem;
-          color: $blue;
-          background: rgba(255,255,255,0);
-          border: 0;
-          outline: 0;
-          @include transition(all 0.2s ease-in-out);
-          &::-webkit-input-placeholder {
-            color: rgba(63,81,181,0.6);
-            font-weight: 100;
-            padding-top: 3px;
-          }
-          &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            color: rgba(63,81,181,0.6);
-            font-weight: 100;
-            padding-top: 3px;
-          }
-          &::-moz-placeholder { /* Mozilla Firefox 19+ */
-            color: rgba(63,81,181,0.6);
-            font-weight: 100;
-            padding-top: 3px;
-          }
-          &:-ms-input-placeholder { /* Internet Explorer 10+ */
-            color: rgba(63,81,181,0.6);
-            font-weight: 100;
-            padding-top: 3px;
-          }
-        }
-
-        &:hover i,
-        &:focus,
-        input:focus * {
-          color: $blue;
-        }
-        &:hover input,
-        input:focus {
-          width: 100px;
-          opacity: 1;
-        }
-      }
-    }
-
-    .dashboard--filters {
-      span {
-        display: block;
-        height: 100%;
-        padding: 10px;
-        font-size: 1.8rem;
-        color: rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        @include transition(all 0.2s ease-out);
-        &:hover,
-        &:focus {
-          color: $blue;
-        }
-      }
-    }
-  }
-  section.dashboard-projects {
-
-  }
-}
