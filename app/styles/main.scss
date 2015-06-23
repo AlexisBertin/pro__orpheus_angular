@@ -11,15 +11,17 @@ html { font-size: 62.5%; }
 body {
   padding: 0;
   margin: 0;
-  overflow: auto;
+  overflow-y: scroll;
   font-size: 1.4rem;
   font-family: $font-openSans;
   background: #eee;
+  @include transition(background 0.2s ease-out);
 }
 
 
 header {
   height: 50px;
+  position: fixed;
   .header-logo {
     display: block;
     height: 100%;
@@ -51,4 +53,25 @@ header {
   }
 }
 
+.dashboard.modify  {
+  opacity: 0;
+  -webkit-transform: translateY(-100%) scale(0.9);
+  transform: translateY(-100%) scale(0.9);
+}
 
+
+.projects {
+  -webkit-transform: translateY(400px);
+  transform: translateY(400px);
+  opacity: 0;
+  @include transition(all 0.2s ease-out);
+}
+.projects.open {
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+.projects .hide {
+  opacity: 0;
+  display: none;
+}

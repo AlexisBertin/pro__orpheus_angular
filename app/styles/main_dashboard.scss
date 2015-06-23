@@ -1,6 +1,14 @@
-.dashboard {
-  margin-top: 50px;
+@import "bourbon/bourbon";
+@import "_variables.scss";
 
+.dashboard {
+  margin-top: 100px;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 
 /* ---- Nav - Tools bar ---- */
   nav.dashboard-tools {
@@ -144,6 +152,7 @@
     margin-bottom: 50px;
 
     article.dashboard--project {
+      overflow: hidden;
       cursor: pointer;
       display: block;
       float: left;
@@ -162,6 +171,7 @@
         font-weight: bold;
         color: $blue;
         opacity: 0.6;
+        @include transition(transform 0.2s ease-out);
         &:after {
           content: "In development";
           display: inline-block;
@@ -196,6 +206,10 @@
           width: 0px;
           opacity: 0;
           border: 1px solid rgba(0,0,0,0.1);
+          &.hrLoader {
+            border: 1px solid $blue;
+            margin-top: -22px;
+          }
         }
         h3 {
           font-family: $font-lora;
@@ -241,12 +255,9 @@
 
 /* --- Article Hover Styles --- */
   .dashboard--projectHover  {
-    border-top: 2px solid $blue !important;
-    border-right: 2px solid $blue !important;
-    border-bottom: 2px solid $blue !important;
-    border-left: 2px solid $blue !important;
+    border: 2px solid $blue !important;
     .dashboard---projectDevelopment {
-      opacity: 1 !important;
+      opacity: 1;
       margin: -1px 0 0 -1px !important;
       &:after {
         @include transition-delay(0.1s !important);
@@ -256,7 +267,7 @@
     }
     .dashboard---projectTitle {
       h2 { color: rgba(0,0,0,1) !important; }
-      hr {
+      hr:not(.hrLoader) {
         width: 100px !important;
         opacity: 1 !important;
       }
@@ -274,7 +285,7 @@
     }
   }
   .dashboard--projectNotHover {
-    .dashboard---projectDevelopment { opacity: 0.2 !important; }
+    .dashboard---projectDevelopment { opacity: 0.2; }
     .dashboard---projectTitle {
       h2 { color: rgba(0,0,0,0.2) !important; }
       h3 { color: rgba(0,0,0,0.2) !important; }
@@ -287,6 +298,49 @@
 /* -------------------- */
 
 
+
+
+/* --- Article Clicked Styles --- */
+.dashboard--projectClicked,
+.dashboard--projectNotClicked {
+  @include transition(all 0.2s ease-out);
+}
+/*.dashboard--projectClicked  {
+  border-top: 1px solid rgba(0,0,0,0) !important;
+  border-right: 1px solid #eee !important;
+  border-bottom: 1px solid #eee !important;
+  border-left: 1px solid rgba(0,0,0,0) !important;
+
+  .dashboard---projectDevelopment {
+    opacity: 0;
+    @include transition-delay(0.2s);
+    @include transform(translateY(-20px));
+  }
+  .dashboard---projectTitle {
+    h2 {
+      @include transition-delay(0.5s);
+      opacity: 0;
+    }
+    hr.hrLoader {
+      width: 100px !important;
+      opacity: 1 !important;
+    }
+    h3 {
+      opacity: 0 !important;
+      @include transition-delay(0.5s);
+      @include transform(translateY(20px));
+    }
+  }
+  footer {
+    opacity: 0 !important;
+    @include transition-delay(0.3s);
+    @include transform(translateY(20px));
+  }
+}
+.dashboard--projectNotClicked {
+  opacity: 0;
+}*/
+/* ------------------------------ */
 
 
 @media screen and (max-width: 1200px){

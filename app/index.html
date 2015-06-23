@@ -2,7 +2,8 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Orpheus</title>
+    <base href="/">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -23,7 +24,7 @@
 
     <!-- Add your site or application content here -->
     <header>
-      <a href="" title="Dashboard" class="header-logo">
+      <a ng-href="#" title="Dashboard" class="header-logo">
         <img src="images/propylonLogo.png " alt="propylon Logo" />
         <img src="" alt="Home Icon"/>
       </a>
@@ -35,7 +36,8 @@
     </nav>
 
     <div class="container">
-      <div ng-view=""></div>
+      <div class="panelContainer" ui-view></div>
+      <div class="projectDetailContainer" projects-details></div>
     </div>
 
 
@@ -53,6 +55,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -60,7 +63,7 @@
 
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/project.js"></script>
 
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
