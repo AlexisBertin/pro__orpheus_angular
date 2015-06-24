@@ -14,7 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Open+Sans|Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
   <body ng-app="orpheusHtmlTemplatesApp">
@@ -24,11 +24,11 @@
 
     <!-- Add your site or application content here -->
     <header>
-      <a ng-href="#" title="Dashboard" class="header-logo">
+      <a ng-href="/#" title="Dashboard" class="header-logo">
         <img src="images/propylon-logo.png " alt="propylon Logo" />
         <i class="fa fa-home"></i>
+        <h1>Orpheus</h1>
       </a>
-      <h1>Orpheus</h1>
     </header>
     <nav>
 
@@ -36,8 +36,8 @@
     </nav>
 
     <div class="container">
-      <div class="panelContainer" ui-view></div>
-      <div class="projectDetailContainer" projects-details></div>
+      <div class="dashboard modify" ui-view></div>
+      <projects-details></projects-details>
     </div>
 
 
@@ -63,9 +63,9 @@
 
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/project.js"></script>
+        <!-- <script src="scripts/controllers/project.js"></script> -->
 
-        <script src="scripts/main.js"></script>
+        <!-- <script src="scripts/main.js"></script> -->
         <!-- endbuild -->
 </body>
 </html>

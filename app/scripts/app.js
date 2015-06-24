@@ -25,20 +25,14 @@ var app = angular.module('orpheusHtmlTemplatesApp', [
         templateUrl: 'views/main.html',
         controller: 'mainCtrl'
       })
-      .state('project', {
-        url: '/project',
-        templateUrl: 'views/project.html',
-        controller: 'projectCtrl'
-      });
       $urlRouterProvider.otherwise("/");
 
   });
 
   app.directive('projectsDetails', function() {
     return {
-        restrict: 'A',
-        replace: 'false',
+        restrict: 'E',
         templateUrl: 'views/project.html',
-        controller: 'projectCtrl'
+        controller: 'mainCtrl'
     };
   });

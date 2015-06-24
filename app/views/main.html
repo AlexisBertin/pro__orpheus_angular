@@ -1,4 +1,4 @@
-<div class="dashboard modify">
+
   <nav class="dashboard-tools">
     <div class="dashboard--search">
       <label>
@@ -19,7 +19,7 @@
 
 
   <section class="dashboard-projects">
-    <article ng-repeat="project in projects" class="dashboard--project" data-id="{{project.id}}">
+    <article ng-repeat="project in projectsDashboard" class="dashboard--project" data-id="{{project.id}}">
       <i ng-if="project.inDev" class="fa fa-code dashboard---projectDevelopment"></i>
       <div class="dashboard---projectTitle">
         <h2>{{project.name}}</h2>
@@ -36,5 +36,3 @@
 
 
   </section>
-
-</div>

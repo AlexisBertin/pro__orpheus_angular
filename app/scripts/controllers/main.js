@@ -1,4 +1,3 @@
-
 "use strict";
 
 app.controller('mainCtrl', function ($scope, $state, $http) {
@@ -20,38 +19,21 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
    $http.get('data/projects.json')
    	.success(function(data){
    		$scope.projects = data;
+   		$scope.projectsDashboard = data;
    		return $scope.projects;
-
-   		// Dashboard content width
-   		var dashboardArticleLength = $('.dashboard-projects .dashboard--project').length;
-   		if(dashboardArticleLength < 4){
-   			$('.dashboard-projects').css({'width':(256*dashboardArticleLength)});
-   			$('.dashboard-projects .dashboard--project').css({'width':'256px'});
-   		}
-
+   		return $scope.projectsDashboard;
    	})
    	.error(function(data){
    		console.log(data);
+   	})
+   	.then(function(){
+   		init();
    	});
 
-
-
-
-
-
-   function init(){
-   	if(window.location.hash){
-	    	var project = window.location.hash;
-	    	// project = project.replace(/^.*#/, '')
-	    	// console.log(project);
-	    	openProject(project);
-	   } else {
-	   	$(".projects").removeClass('open');
-	     	$('.dashboard').removeClass('modify');
-	     	resetDashboard();
-		}
+   $scope.showLinkDev = function(project) {
+   	return project.hasOwnProperty('linkDev');
    }
-   init();
+
 
    if (window.history && window.history.pushState) {
    	$(window).on('popstate', function() {
@@ -62,15 +44,42 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 
 
 
+   function init(){
+   	if(window.location.hash){
+	    	var project = window.location.hash;
+	    	// project = project.replace(/^.*#/, '')
+	    	console.log(project);
+	    	openProject(project);
+	   } else {
+	   	$(".projects").removeClass('open');
+	     	$('.dashboard').removeClass('modify');
+	     	resetDashboard();
+		}
+   }
+
+
+
+
+
+
    function openProject(project){
    	$('.dashboard').addClass('modify');
-   	$('body').css({'background':'#fff'});
-   	$(project).removeClass('hide');
-   	$(".projects").addClass('open');
+   	// $('body').css({'background':'#fff'});
+   	setTimeout(function(){
+   		$(project).removeClass('hide');
+   		$(".projects").addClass('open');
+   	},100);
    }
 
    function resetDashboard(){
    	$('.dashboard--project').removeAttr('style');
+   	// Dashboard content width
+   	// var dashboardArticleLength = $('.dashboard-projects .dashboard--project').length;
+   	// if(dashboardArticleLength < 4){
+   	// 	$('.dashboard-projects').css({'width':(256*dashboardArticleLength)});
+   	// 	$('.dashboard-projects .dashboard--project').css({'width':'256px'});
+   	// 	console.log($('.dashboard--project').css('width'));
+   	// }
    	// $('.dashboard--projectClicked .dashboard---projectTitle .hrLoader')
    	$('.dashboard--projectClicked footer').removeAttr('style');
    	$('.dashboard--projectClicked .dashboard---projectDevelopment').removeAttr('style');
@@ -95,8 +104,11 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 
 
 
+
+
+
    function dashboardEvents(){
-   	$('body').css({'background':'#eee'});
+   	// $('body').css({'background':'#eee'});
 
 	   // Dashboard Content Hover
 	   var clicked = false;
@@ -118,8 +130,6 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 	   		}
 	   	}
 	   );
-
-
 	   // Dashboard Content Click
 	   $('.dashboard-projects .dashboard--project').click(function(){
 	   	clicked = true;
@@ -151,8 +161,7 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 
 	   	setTimeout(function(){
 	   		$('.dashboard--projectClicked .dashboard---projectDevelopment')
-	   			.fadeOut('fast')
-
+	   			.fadeOut('fast');
 	   		$('.dashboard--projectClicked .dashboard---projectTitle h3')
 	   			.delay(200)
 	   			.queue(function(){
@@ -165,15 +174,12 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 			   			'transform': 'translateY(40px)'
 			   		}).dequeue();
 	   			});
-
 	   		$('.dashboard--projectClicked .dashboard---projectTitle h2')
 	   			.delay(400)
 	   			.queue(function(){
 	   				$(this).css({'opacity':'0'}).dequeue();
-	   			})
+	   			});
 	     	},400);
-
-
 	     	setTimeout(function(){
 	   		$('.dashboard--projectClicked .dashboard---projectTitle hr').css({
 	   			'opacity':'0'
@@ -182,15 +188,15 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 	   			'opacity':'0'
 	   		});
 	   	},600);
-
 	   	setTimeout(function(){
 			var projectId = $('.dashboard--projectClicked').data("id");
 			var project = '#project'+projectId;
 			window.history.pushState('project', 'Project Page', project)
-			openProject(project);
+				openProject(project);
 	   	},700);
 	   });
    }
+
 
 
 })

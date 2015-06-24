@@ -6,6 +6,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "_variables.scss";
 @import "_reset.scss";
 @import "main_dashboard.scss";
+@import "main_project.scss";
 
 html { font-size: 62.5%; }
 body {
@@ -13,15 +14,17 @@ body {
   margin: 0;
   overflow-y: scroll;
   font-size: 1.4rem;
-  font-family: $font-openSans;
+  font-family: $font-sansserif;
   background: #eee;
   @include transition(background 0.2s ease-out);
 }
 
 
-header {
+body > header {
   height: 50px;
   position: fixed;
+  z-index: 1000;
+  background-color: rgba(238, 238, 238, 0.5);
   .header-logo {
     display: block;
     height: 100%;
@@ -51,6 +54,17 @@ header {
       top: 50%;
       @include transition(all 0.2s ease-out);
     }
+    h1 {
+      @extend .verticalAlign;
+      font-size: 2.4rem;
+      color: rgba(0,0,0,0.8);
+      font-family: $font-sansserif;
+      font-weight: 700;
+      display: block;
+      float: left;
+      margin-top: auto;
+      padding: 0 15px;
+    }
 
     &:hover {
       img {
@@ -63,30 +77,38 @@ header {
       }
     }
   }
-  h1 {
-    @extend .verticalAlign;
-    font-size: 2.4rem;
-    color: rgba(0,0,0,0.8);
-    font-family: $font-montserrat;
-    display: block;
-    float: left;
-    margin-top: auto;
-    margin-left: 15px;
-  }
+
+}
+
+
+
+
+
+.dashboard,
+.projects {
+  position: absolute;
+  width: 75%;
+  margin: 100px auto auto auto;
+  left: 0;
+  right: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .dashboard.modify  {
   opacity: 0;
-  -webkit-transform: translateY(-100%) scale(0.9);
-  transform: translateY(-100%) scale(0.9);
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
 }
 
-
 .projects {
-  -webkit-transform: translateY(400px);
-  transform: translateY(400px);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
   opacity: 0;
-  @include transition(all 0.2s ease-out);
 }
 .projects.open {
   -webkit-transform: translateY(0) !important;

@@ -1,0 +1,169 @@
+@import "bourbon/bourbon";
+@import "_variables.scss";
+
+.project {
+	margin-bottom: 100px;
+
+  @extend .boxShadowGlobal;
+  background: #fff;
+  /*border: 1px solid #eee;*/
+  padding: 40px;
+
+  header {
+  	margin-bottom: 4.8rem;
+  	.project--projectDevelopment {
+  	  position: absolute;
+  	  display: block;
+  	  left: 15px;
+  	  top: 15px;
+  	  padding: 5px;
+  	  font-size: 2rem;
+  	  font-weight: bold;
+  	  color: $blue;
+  	  &:after {
+  	    content: "In development";
+  	    display: inline-block;
+  	    position: relative;
+  	    margin-left: 6px;
+  	    top: -3px;
+  	    font-size: 1.2rem;
+  	    font-weight: normal;
+  	    color: rgba(63,81,181,0.6);
+  	    @include transition(all 0.2s ease-out);
+  	    /*opacity: 0;
+  	    @include transform(translateY(-10px));*/
+  	  }
+  	}
+  	.project--edit {
+  		position: absolute;
+  		top: 15px;
+  		right: 15px;
+  		display: block;
+  		font-size: 2rem;
+  		padding: 5px;
+  		color: $blue;
+  		opacity: 0.6;
+  		@include transition(all 0.2s ease-out);
+  		&:hover {
+  			opacity: 1;
+  		}
+  	}
+  	.project--projectTitle {
+  	  text-align: center;
+  	  display: block;
+  	  margin-top: 6rem;
+  	  &, h2, hr, h3 {
+  	    @include transition(all 0.2s ease-out);
+  	  }
+  	  h1 {
+  	    font-size: 6.8rem;
+  	    line-height: 1.5;
+  	    font-family: $font-serif;
+  	    margin-bottom: 0.8rem;
+  	    overflow: hidden;
+  	  }
+  	  h3 {
+  	    color: rgba(0,0,0,0.4);
+  	    padding-top: 0px;
+  	  }
+  	}
+  }
+
+  ul.project-date li,
+  ul.project-links li {
+  	font-size: 1.4rem;
+  	color: rgba(0,0,0,0.4);
+  	line-height: 2.4rem;
+  	span {
+  	  color: rgba(0,0,0,0.8);
+  	}
+  }
+
+  ul.project-date {
+  	float: left;
+  	display: block;
+  	li {
+	  	text-align: left;
+	  }
+  }
+  ul.project-links {
+  	float: right;
+  	display: block;
+  	li {
+  		text-align: right;
+  	}
+  }
+
+  main {
+  	float: none;
+  	clear: both;
+
+
+  	h2 {
+  	  margin-top: 80px;
+  	  margin-bottom: 20px;
+  	  padding-bottom: 15px;
+  	  color: rgba(0,0,0,0.8);
+  	  font-family: $font-serif;
+  	  font-size: 2.4rem;
+  	  border-bottom: 1px solid rgba(0,0,0,0.1);
+  	  letter-spacing: 0px;
+  	  &:first-child { margin-top: 160px; }
+  	}
+  	div.content {
+  		margin: 0 auto 2.4rem auto;
+  		p {
+  			display: block;
+  			font-size: 1.6rem;
+  			line-height: 1.8;
+  			margin-bottom: 1.8rem;
+  			color: rgba(0,0,0,0.6);
+  		}
+  	}
+
+  	ul.contentToc {
+  		margin-left: 20px;
+  		& > li:first-child { padding: 0 0 5px 0 !important;}
+  		& > li:last-child { padding: 5px 0 0 0 !important;}
+  		li {
+  			padding: 5px 0;
+  			border-left: 2px solid #5469DB;
+  			a {
+  				font-size: 1.6rem;
+  				padding: 5px;
+  				text-decoration: none;
+  				color: rgba(0, 0, 0, 0.6);
+  				left: -22px;
+  				position: relative;
+  				span {
+  					display: inline-block;
+  					font-size: 1.6rem;
+  					width: 31px;
+  					height: 31px;
+  					text-align: center;
+  					padding: 7px 0;
+  					background: #FFFFFF;
+  					border-radius: 50px;
+  					font-weight: 700;
+  					color: rgba(0, 0, 0, 1);
+  					@extend .boxShadowGlobal;
+  				}
+  			}
+  		}
+  	}
+
+  	ul.contentTocChildren {
+  		margin-left: 35px;
+  		& > li {
+  			border-left: 2px solid rgba(0,0,0,0.2);
+  			a {
+					color: rgba(0,0,0,0.4);
+					span {
+						font-size: 1.4rem;
+						color: rgba(0,0,0,0.6);
+					}
+				}
+  		}
+  	}
+  }
+}

@@ -1,19 +1,17 @@
 <div class="projects">
-
-
-
-	<article ng-repeat="project in projects" class="project hide" id="{{project.value}}">
+  <article ng-repeat="project in projects" class="project hide" id="project{{project.id}}">
     <header>
       <i ng-if="project.inDev" class="fa fa-code project--projectDevelopment"></i>
+      <a href class="project--edit" title="Edit this project"><i class="fa fa-pencil"></i></a>
+
       <div class="project--projectTitle">
-        <h2>{{project.name}}</h2>
+        <h1>{{project.name}}</h1>
         <h3>{{project.key}}</h3>
       </div>
-      <i class="fa fa-pencil"></i>
     </header>
     <ul class="project-date">
-      <li>Creation Date: <span>{{project.dateCreated}}</span></li>
-      <li>Started Date: <span>{{project.dateLastUpdate}}</span></li>
+      <li><i class="fa fa-clock-o"></i> Creation Date: <span>{{project.dateCreated}}</span></li>
+      <li><i class="fa fa-clock-o"></i> Last Update: <span>{{project.dateLastUpdate}}</span></li>
     </ul>
     <ul class="project-links">
       <li>
@@ -22,33 +20,37 @@
           {{project.linkProd}}
         </a>
       </li>
-      <li ng-if="showLinkDev(project)">
-        <a ng-href="{{project.linkDev}}" title="Development Link">
+      <!-- <li ng-if="showLinkDev(project)">
+        <a ng-href="project.linkDev" title="Development Link">
           <i class="fa fa-link"></i>
           {{project.linkDev}}
         </a>
-      </li>
+      </li> -->
     </ul>
 
     <main>
-      <div class="content">{{project.introduction}}</div>
+      <h2>Introduction</h2>
+      <div class="content" ng-bind-html="project.introduction">{{project.introduction}}</div>
+
+      <h2>Table of Content</h2>
       <ul class="contentToc">
         <li ng-repeat="tocPage in project.tableOfContent">
           <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
             <span>{{$index + 1}}</span>
             {{tocPage.content}}
-            <ul ng-if="tocPage.children" class="contentTocChildren">
-              <li ng-repeat="tocPageChild in tocPage.children">
-                <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
-                  <span>{{$index + 1}}</span>
-                  {{tocPageChild.content}}
-                </a>
-              </li>
-            </ul>
           </a>
+
+          <ul ng-if="tocPage.children" class="contentTocChildren">
+            <li ng-repeat="tocPageChild in tocPage.children">
+              <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
+                <span>3.{{$index + 1}}</span>
+                {{tocPageChild.content}}
+              </a>
+            </li>
+          </ul>
+
         </li>
       </ul>
     </main>
   </article>
-
 </div>

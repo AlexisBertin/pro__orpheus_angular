@@ -19,9 +19,7 @@ app.controller('projectCtrl', function ($scope, $http) {
 
 
 
-	$scope.showLinkDev = function(project) {
-		return project.hasOwnProperty('linkDev');
-	}
+
 
 
 
