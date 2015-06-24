@@ -1,4 +1,7 @@
-app.controller('mainCtrl', function ($scope, $state) {
+
+"use strict";
+
+app.controller('mainCtrl', function ($scope, $state, $http) {
    $scope.awesomeThings = [
    	'HTML5 Boilerplate',
    	'AngularJS',
@@ -12,6 +15,28 @@ app.controller('mainCtrl', function ($scope, $state) {
    $('.dashboard---searchInput').blur(function(){
    	$('.dashboard--search label i').css({'color':dashboardSearchIcon});
    });
+
+
+   $http.get('data/projects.json')
+   	.success(function(data){
+   		$scope.projects = data;
+   		return $scope.projects;
+
+   		// Dashboard content width
+   		var dashboardArticleLength = $('.dashboard-projects .dashboard--project').length;
+   		if(dashboardArticleLength < 4){
+   			$('.dashboard-projects').css({'width':(256*dashboardArticleLength)});
+   			$('.dashboard-projects .dashboard--project').css({'width':'256px'});
+   		}
+
+   	})
+   	.error(function(data){
+   		console.log(data);
+   	});
+
+
+
+
 
 
    function init(){
@@ -72,12 +97,7 @@ app.controller('mainCtrl', function ($scope, $state) {
 
    function dashboardEvents(){
    	$('body').css({'background':'#eee'});
-	   // Dashboard content width
-	   var dashboardArticleLength = $('.dashboard-projects .dashboard--project').length;
-	   if(dashboardArticleLength < 4){
-	   	$('.dashboard-projects').css({'width':(256*dashboardArticleLength)});
-	   	$('.dashboard-projects .dashboard--project').css({'width':'256px'});
-	   }
+
 	   // Dashboard Content Hover
 	   var clicked = false;
 	   $('.dashboard-projects .dashboard--project').hover(
@@ -164,22 +184,22 @@ app.controller('mainCtrl', function ($scope, $state) {
 	   	},600);
 
 	   	setTimeout(function(){
-
-				var projectId = $('.dashboard--projectClicked').data("id");
-				var project = '#project'+projectId;
-				window.history.pushState('project', 'Project Page', project)
-				openProject(project);
+			var projectId = $('.dashboard--projectClicked').data("id");
+			var project = '#project'+projectId;
+			window.history.pushState('project', 'Project Page', project)
+			openProject(project);
 	   	},700);
 	   });
    }
 
 
-
-
-
-
-
-
-
 })
 
+
+.filter('updateDate', [
+    '$filter', function($filter) {
+        return function(input, format) {
+            return $filter('date')(new Date(input), format);
+        };
+    }
+]);

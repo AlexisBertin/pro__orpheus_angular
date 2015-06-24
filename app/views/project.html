@@ -1,72 +1,54 @@
 <div class="projects">
-	<article class="project hide" id="project1">
-      <i class="fa fa-code project---projectDevelopment"></i>
-      <div class="project---projectTitle">
-        <h2>RegView 1</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
+
+
+
+	<article ng-repeat="project in projects" class="project hide" id="{{project.value}}">
+    <header>
+      <i ng-if="project.inDev" class="fa fa-code project--projectDevelopment"></i>
+      <div class="project--projectTitle">
+        <h2>{{project.name}}</h2>
+        <h3>{{project.key}}</h3>
       </div>
-      <footer>
-        <p class="project---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
-    <article class="project hide" id="project2">
-      <i class="fa fa-code project---projectDevelopment"></i>
-      <div class="project---projectTitle">
-        <h2>RegView 2</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="project---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
-    <article class="project hide" id="project3">
-      <i class="fa fa-code project---projectDevelopment"></i>
-      <div class="project---projectTitle">
-        <h2>RegView 3</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="project---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
-    <article class="project hide" id="project4">
-      <i class="fa fa-code project---projectDevelopment"></i>
-      <div class="project---projectTitle">
-        <h2>RegView 4</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="project---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article><article class="project hide" id="project5">
-      <i class="fa fa-code project---projectDevelopment"></i>
-      <div class="project---projectTitle">
-        <h2>RegView 5</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="project---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
+      <i class="fa fa-pencil"></i>
+    </header>
+    <ul class="project-date">
+      <li>Creation Date: <span>{{project.dateCreated}}</span></li>
+      <li>Started Date: <span>{{project.dateLastUpdate}}</span></li>
+    </ul>
+    <ul class="project-links">
+      <li>
+        <a ng-href="{{project.linkProd}}" title="Production Link">
+          <i class="fa fa-link"></i>
+          {{project.linkProd}}
+        </a>
+      </li>
+      <li ng-if="showLinkDev(project)">
+        <a ng-href="{{project.linkDev}}" title="Development Link">
+          <i class="fa fa-link"></i>
+          {{project.linkDev}}
+        </a>
+      </li>
+    </ul>
+
+    <main>
+      <div class="content">{{project.introduction}}</div>
+      <ul class="contentToc">
+        <li ng-repeat="tocPage in project.tableOfContent">
+          <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
+            <span>{{$index + 1}}</span>
+            {{tocPage.content}}
+            <ul ng-if="tocPage.children" class="contentTocChildren">
+              <li ng-repeat="tocPageChild in tocPage.children">
+                <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
+                  <span>{{$index + 1}}</span>
+                  {{tocPageChild.content}}
+                </a>
+              </li>
+            </ul>
+          </a>
+        </li>
+      </ul>
+    </main>
+  </article>
 
 </div>

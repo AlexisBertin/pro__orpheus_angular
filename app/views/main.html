@@ -19,77 +19,20 @@
 
 
   <section class="dashboard-projects">
-    <article class="dashboard--project" data-id="1">
-      <i class="fa fa-code dashboard---projectDevelopment"></i>
+    <article ng-repeat="project in projects" class="dashboard--project" data-id="{{project.id}}">
+      <i ng-if="project.inDev" class="fa fa-code dashboard---projectDevelopment"></i>
       <div class="dashboard---projectTitle">
-        <h2>RegView 1</h2>
+        <h2>{{project.name}}</h2>
         <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
+        <h3>{{project.key}}</h3>
       </div>
       <footer>
         <p class="dashboard---lastUpdate">
           <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
+          Last update: <span>{{project.dateLastUpdate | updateDate:'MMM d, y'}}</span>
         </p>
       </footer>
     </article>
-    <article class="dashboard--project" data-id="2">
-      <i class="fa fa-code dashboard---projectDevelopment"></i>
-      <div class="dashboard---projectTitle">
-        <h2>RegView 2</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="dashboard---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
-    <article class="dashboard--project" data-id="3">
-      <i class="fa fa-code dashboard---projectDevelopment"></i>
-      <div class="dashboard---projectTitle">
-        <h2>RegView 3</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="dashboard---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
-    <article class="dashboard--project" data-id="4">
-      <i class="fa fa-code dashboard---projectDevelopment"></i>
-      <div class="dashboard---projectTitle">
-        <h2>RegView 4</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="dashboard---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article><article class="dashboard--project" data-id="5">
-      <i class="fa fa-code dashboard---projectDevelopment"></i>
-      <div class="dashboard---projectTitle">
-        <h2>RegView 5</h2>
-        <hr><hr class="hrLoader">
-        <h3>OAGSUPP</h3>
-      </div>
-      <footer>
-        <p class="dashboard---lastUpdate">
-          <i class="fa fa-clock-o"></i>
-          Last update: <span>June 16</span>
-        </p>
-      </footer>
-    </article>
-
-
 
 
   </section>

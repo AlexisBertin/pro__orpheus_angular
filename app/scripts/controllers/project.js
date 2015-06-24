@@ -1,4 +1,6 @@
-app.controller('projectCtrl', function ($scope) {
+"use strict";
+
+app.controller('projectCtrl', function ($scope, $http) {
 	$scope.awesomeThings = [
 	  'HTML5 Boilerplate',
 	  'AngularJS',
@@ -14,6 +16,13 @@ app.controller('projectCtrl', function ($scope) {
 	// $(".project").addClass('open');
 
 	// $scope.Page.setTitle('Works | Alexis Bertin');
+
+
+
+	$scope.showLinkDev = function(project) {
+		return project.hasOwnProperty('linkDev');
+	}
+
 
 
 
