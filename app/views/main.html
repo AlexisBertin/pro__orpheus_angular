@@ -1,10 +1,12 @@
 
   <nav class="dashboard-tools">
     <div class="dashboard--search">
-      <label>
-        <i class="fa fa-search"></i>
-        <input type="text" class="dashboard---searchInput" title="search" placeholder="Search..." />
-      </label>
+      <form action="" method="POST" role="form">
+        <label>
+          <i class="fa fa-search"></i>
+          <input type="search" id="search" ng-model="search" class="dashboard---searchInput" title="search" placeholder="Search..." />
+        </label>
+      </form>
     </div>
     <div class="dashboard--filters">
       <span>Filters</span>
@@ -19,7 +21,7 @@
 
 
   <section class="dashboard-projects">
-    <article ng-repeat="project in projectsDashboard" class="dashboard--project" data-id="{{project.id}}">
+    <article ng-repeat="project in projectsDashboard | filter:search | orderBy:project.inDev" class="dashboard--project" data-id="{{project.id}}">
       <i ng-if="project.inDev" class="fa fa-code dashboard---projectDevelopment"></i>
       <div class="dashboard---projectTitle">
         <h2>{{project.name}}</h2>

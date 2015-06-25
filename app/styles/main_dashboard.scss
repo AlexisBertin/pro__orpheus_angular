@@ -193,7 +193,6 @@
           font-size: 3rem;
           color: rgba(0,0,0,0.8);
           font-family: $font-serif;
-          font-weight: 700;
         }
         hr {
           display: block;
@@ -357,7 +356,7 @@
     }
   }
 }
-@media screen and (max-width: 580px){
+@media screen and (max-width: 700px){
   article.dashboard--project {
     width: 100% !important;
     &:nth-child(3n){

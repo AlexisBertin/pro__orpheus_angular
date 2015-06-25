@@ -1,9 +1,14 @@
+@font-face {
+   font-family: 'calluna';
+	src: url('fonts/Calluna/Calluna-Regular.otf');
+}
+
 @import "bourbon/bourbon";
 
 $blue: #3F51B5; /* rgba(63,81,181,1); */
 $font-sansserif: 'Open Sans', sans-serif;
-$font-serif: 'Lora', serif;
-
+// $font-serif: 'Lora', serif;
+$font-serif: Georgia, serif;
 
 .verticalAlign {
 	position: relative;

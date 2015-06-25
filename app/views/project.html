@@ -33,24 +33,32 @@
       <div class="content" ng-bind-html="project.introduction">{{project.introduction}}</div>
 
       <h2>Table of Content</h2>
-      <ul class="contentToc">
-        <li ng-repeat="tocPage in project.tableOfContent">
-          <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
-            <span>{{$index + 1}}</span>
-            {{tocPage.content}}
-          </a>
-
-          <ul ng-if="tocPage.children" class="contentTocChildren">
-            <li ng-repeat="tocPageChild in tocPage.children">
-              <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
-                <span>3.{{$index + 1}}</span>
-                {{tocPageChild.content}}
-              </a>
-            </li>
-          </ul>
-
-        </li>
-      </ul>
+      <div class="project--tableOfContent">
+        <ul class="contentToc">
+          <li ng-repeat="tocPage in project.tableOfContent">
+            <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
+              <span>{{tocPage.id}}</span>
+              {{tocPage.content}}
+            </a>
+            <ul ng-if="tocPage.children" class="contentTocChildren">
+              <li ng-repeat="tocPageChild in tocPage.children">
+                <a ng-href="{{tocPageChild.link}}" title="{{tocPageChild.content}} link">
+                  <span>{{tocPageChild.id}}</span>
+                  {{tocPageChild.content}}
+                </a>
+                <ul ng-if="tocPageChild.children" class="contentTocChildren nested">
+                  <li ng-repeat="tocPageChildNested in tocPageChild.children">
+                    <a ng-href="{{tocPageChildNested.link}}" title="{{tocPageChildNested.content}} link">
+                      <span>{{tocPageChildNested.id}}</span>
+                      {{tocPageChildNested.content}}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </main>
   </article>
 </div>
