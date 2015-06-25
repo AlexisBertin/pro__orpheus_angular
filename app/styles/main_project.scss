@@ -2,42 +2,23 @@
 @import "_variables.scss";
 
 .project {
-	margin-bottom: 100px;
-
-  @extend .boxShadowGlobal;
-  background: #fff;
-  /*border: 1px solid #eee;*/
-  padding: 40px;
+	margin: 0 auto 150px auto;
+	background: #fff;
+	padding: 20px;
+	width: 70%;
 
   header {
   	margin-bottom: 4.8rem;
-  	.project--projectDevelopment {
+  	.project--backDash {
   	  position: absolute;
   	  display: block;
-  	  left: 15px;
-  	  top: 15px;
-  	  padding: 5px;
-  	  font-size: 2rem;
-  	  font-weight: bold;
-  	  color: $blue;
-  	  &:after {
-  	    content: "In development";
-  	    display: inline-block;
-  	    position: relative;
-  	    margin-left: 6px;
-  	    top: -3px;
-  	    font-size: 1.2rem;
-  	    font-weight: normal;
-  	    color: rgba(63,81,181,0.6);
-  	    @include transition(all 0.2s ease-out);
-  	    /*opacity: 0;
-  	    @include transform(translateY(-10px));*/
-  	  }
+  	  left: 35px;
+  	  top: 30px;
   	}
   	.project--edit {
   		position: absolute;
-  		top: 15px;
-  		right: 15px;
+  		top: 35px;
+  		right: 35px;
   		display: block;
   		font-size: 2rem;
   		padding: 5px;
@@ -56,9 +37,10 @@
   	    @include transition(all 0.2s ease-out);
   	  }
   	  h1 {
-  	    font-size: 10rem;
+  	    font-size: 12rem;
   	    line-height: 1.3;
   	    font-family: $font-serif;
+  	    color: rgba(0,0,0,1);
   	    margin-bottom: 0.8rem;
   	  }
   	  h3 {
@@ -83,6 +65,23 @@
   	display: block;
   	li {
 	  	text-align: left;
+	  	.project--projectDevelopment {
+	  		font-weight: bold;
+	  		color: $blue;
+	  		font-size: 1.1rem;
+	  		&:after {
+	  		  content: "In development";
+	  		  display: inline-block;
+	  		  position: relative;
+	  		  margin-left: 5px;
+	  		  font-size: 1.4rem;
+	  		  font-weight: normal;
+	  		  color: rgba(63,81,181,0.6);
+	  		  @include transition(all 0.2s ease-out);
+	  		  /*opacity: 0;
+	  		  @include transform(translateY(-10px));*/
+	  		}
+	  	}
 	  }
   }
   ul.project-links {
@@ -99,15 +98,17 @@
 
 
   	h2 {
-  	  margin-top: 100px;
+  	  margin-top: 110px;
   	  margin-bottom: 15px;
+  	  padding-top: 80px;
   	  padding-bottom: 15px;
-  	  color: rgba(0,0,0,1);
+  	  color: rgba(0, 0, 0, 0.8);
   	  font-family: $font-serif;
-  	  font-size: 3rem;
-  	  border-bottom: 1px solid rgba(0,0,0,0.1);
+  	  font-size: 5rem;
+  	  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   	  letter-spacing: 0px;
-  	  &:first-child { margin-top: 180px; }
+  	  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  	  &:first-child { margin-top: 250px; }
   	}
   	div.content {
   		margin: 0 auto 2.4rem auto;
@@ -176,7 +177,47 @@
   		}
   	}*/
   }
+
+
+
 }
+
+
+footer {
+	.project--backDash {
+	  position: absolute;
+	  display: block;
+	  left: 35px;
+	  bottom: 50px;
+	}
+}
+
+
+
+/* --- Back to Dashboard button - Header & Footer --- */
+	.project header .project--backDash,
+	footer .project--backDash {
+	  position: absolute;
+	  display: block;
+	  padding: 10px 5px;
+	  color: rgba(63,81,181,0.6);
+	  text-decoration: none;
+	  font-size: 1.6rem;
+	  &:hover {
+	  	color: $blue;
+	  	i.fa { margin-right: 10px; }
+	  }
+	  &,
+	  & i.fa {
+	  	@include transition(all 0.2s ease-out);
+	  }
+	 	i.fa {
+	 		color: $blue;
+	 		display: inline-block;
+	 		margin-right: 5px;
+	 	}
+	}
+/* -------------------------------------------------- */
 
 
 @media screen and (max-width: 1050px){

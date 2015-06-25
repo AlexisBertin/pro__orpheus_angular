@@ -101,35 +101,29 @@ app.controller('mainCtrl', function ($scope, $state, $http) {
 
 
 
+   // Dashboard Content Hover
+   var clicked = false;
 
-
-
-
+   $scope.projectMouseover = function(project){
+		if(clicked === false){
+   		$('.dashboard-projects .dashboard--project')
+   			.addClass('dashboard--projectNotHover');
+   		$('.'+project)
+   			.removeClass('dashboard--projectNotHover')
+   			.addClass('dashboard--projectHover');
+   	}
+   }
+   $scope.projectMouseout = function(){
+   	if(clicked === false){
+   		$('.dashboard-projects .dashboard--project')
+   		.removeClass('dashboard--projectNotHover')
+   		.removeClass('dashboard--projectHover');
+   	}
+   }
 
 
    function dashboardEvents(){
    	// $('body').css({'background':'#eee'});
-
-	   // Dashboard Content Hover
-	   var clicked = false;
-	   $('.dashboard-projects .dashboard--project').hover(
-	   	function(){
-	   		if(clicked === false){
-		   		$('.dashboard-projects .dashboard--project')
-		   			.addClass('dashboard--projectNotHover');
-		   		$(this)
-		   			.removeClass('dashboard--projectNotHover')
-		   			.addClass('dashboard--projectHover');
-		   	}
-	   	},
-	   	function(){
-	   		if(clicked === false){
-	   			$('.dashboard-projects .dashboard--project')
-	   			.removeClass('dashboard--projectNotHover')
-	   			.removeClass('dashboard--projectHover');
-	   		}
-	   	}
-	   );
 	   // Dashboard Content Click
 	   $('.dashboard-projects .dashboard--project').click(function(){
 	   	clicked = true;

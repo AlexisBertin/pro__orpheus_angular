@@ -1,7 +1,10 @@
 <div class="projects">
   <article ng-repeat="project in projects" class="project hide" id="project{{project.id}}">
     <header>
-      <i ng-if="project.inDev" class="fa fa-code project--projectDevelopment"></i>
+      <a href class="project--backDash" title="Back to dashboard">
+        <i class="fa fa-long-arrow-left"></i>
+        Back to Dashboard
+      </a>
       <a href class="project--edit" title="Edit this project"><i class="fa fa-pencil"></i></a>
 
       <div class="project--projectTitle">
@@ -12,6 +15,7 @@
     <ul class="project-date">
       <li><i class="fa fa-clock-o"></i> Creation Date: <span>{{project.dateCreated}}</span></li>
       <li><i class="fa fa-clock-o"></i> Last Update: <span>{{project.dateLastUpdate}}</span></li>
+      <li><i ng-if="project.inDev" class="fa fa-code project--projectDevelopment"></i></li>
     </ul>
     <ul class="project-links">
       <li>
@@ -61,4 +65,11 @@
       </div>
     </main>
   </article>
+
+  <footer>
+    <a href class="project--backDash" title="Back to dashboard">
+      <i class="fa fa-long-arrow-left"></i>
+      Back to Dashboard
+    </a>
+  </footer>
 </div>

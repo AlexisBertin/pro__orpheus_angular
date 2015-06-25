@@ -15,7 +15,7 @@ body {
   overflow-y: scroll;
   font-size: 1.4rem;
   font-family: $font-sansserif;
-  background: #fafafa;
+  background: #fff;
   @include transition(background 0.2s ease-out);
 }
 
@@ -60,7 +60,7 @@ body > header {
       font-size: 2.4rem;
       line-height: 50px;
       vertical-align: middle;
-      background-color: rgba(250, 250, 250, 0.8);
+      background-color: rgba(255, 255, 255, 0.8);
       color: rgba(0, 0, 0, 0.8);
       font-family: $font-serif;
       /*font-weight: 700;*/
@@ -91,8 +91,7 @@ body > header {
 .dashboard,
 .projects {
   position: absolute;
-  width: 75%;
-  margin: 100px auto auto auto;
+  width: 100%;
   left: 0;
   right: 0;
   -webkit-transition-property: opacity, -webkit-transform;
@@ -103,13 +102,20 @@ body > header {
   transition-duration: 0.5s;
 }
 
+
+.dashboard {
+  margin: 100px auto auto auto;
+}
 .dashboard.modify  {
   opacity: 0;
   -webkit-transform: translateY(-150%);
   transform: translateY(-150%);
 }
 
+
+
 .projects {
+  margin: 50px auto auto auto;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   opacity: 0;
