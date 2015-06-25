@@ -12,27 +12,25 @@ var app = angular.module('orpheusHtmlTemplatesApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ui.router',
+    'ngRoute',
     'ngSanitize',
     'ngTouch'
   ]);
 
-  app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $locationProvider.html5Mode(true).hashPrefix('!');
-    $stateProvider
-      .state('app', {
-        url: '/',
-        templateUrl: 'views/main.html',
+  app.config(function ($routeProvider) {
+    // $locationProvider.html5Mode(true).hashPrefix('!');
+
+    $routeProvider
+      .when('/',{
+        templateUrl:'views/main.html',
         controller: 'mainCtrl'
       })
-      $urlRouterProvider.otherwise("/");
+      .when('/:project',{
+        templateUrl:'views/project.html',
+        controller: 'projectCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
 
-  });
-
-  app.directive('projectsDetails', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'views/project.html',
-        controller: 'mainCtrl'
-    };
   });

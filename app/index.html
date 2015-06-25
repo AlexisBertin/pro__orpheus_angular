@@ -24,7 +24,7 @@
 
     <!-- Add your site or application content here -->
     <header>
-      <a ng-href="/#" title="Dashboard" class="header-logo">
+      <a href="/" title="Dashboard" class="header-logo">
         <img src="images/propylon-logo.png " alt="propylon Logo" />
         <i class="fa fa-home"></i>
         <h1>Orpheus</h1>
@@ -36,8 +36,8 @@
     </nav>
 
     <div class="container">
-      <div class="dashboard modify" ui-view></div>
-      <projects-details></projects-details>
+      <div ng-view=""></div>
+      <!-- <projects-details></projects-details> -->
     </div>
 
 
@@ -55,7 +55,6 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -63,7 +62,7 @@
 
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <!-- <script src="scripts/controllers/project.js"></script> -->
+        <script src="scripts/controllers/project.js"></script>
 
         <!-- <script src="scripts/main.js"></script> -->
         <!-- endbuild -->

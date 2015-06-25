@@ -1,5 +1,5 @@
 <div class="projects">
-  <article ng-repeat="project in projects" class="project hide" id="project{{project.id}}">
+  <article ng-repeat="project in projects" class="project hide" id="{{project.value}}">
     <header>
       <a href class="project--backDash" title="Back to dashboard">
         <i class="fa fa-long-arrow-left"></i>
@@ -65,11 +65,4 @@
       </div>
     </main>
   </article>
-
-  <footer>
-    <a href class="project--backDash" title="Back to dashboard">
-      <i class="fa fa-long-arrow-left"></i>
-      Back to Dashboard
-    </a>
-  </footer>
 </div>
