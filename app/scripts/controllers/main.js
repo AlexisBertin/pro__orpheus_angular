@@ -118,7 +118,7 @@ app.controller('mainCtrl', function ($scope, $http) {
    		dashboardEvents();
    		// fallback to avoid spam rush
    		$('.dashboard--projectClicked .dashboard---projectTitle h2').removeAttr('style');
-   	},50);
+   	},100);
    }
 
 
