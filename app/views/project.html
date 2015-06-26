@@ -19,13 +19,13 @@
     </ul>
     <ul class="project-links">
       <li>
-        <a ng-href="{{project.linkProd}}" target="_blank" title="Production Link">
+        <a href="{{project.linkProd}}" target="_blank" title="Production Link">
           <i class="fa fa-link"></i>
           {{project.linkProd}}
         </a>
       </li>
       <!-- <li ng-if="showLinkDev(project)">
-        <a ng-href="project.linkDev" target="_blank" title="Development Link">
+        <a href="project.linkDev" target="_blank" title="Development Link">
           <i class="fa fa-link"></i>
           {{project.linkDev}}
         </a>
@@ -40,19 +40,19 @@
       <div class="project--tableOfContent">
         <ul class="contentToc">
           <li ng-repeat="tocPage in project.tableOfContent">
-            <a ng-href="{{tocPage.link}}" title="{{tocPage.content}} link">
+            <a href="{{tocPage.link}}" target="_blank" title="{{tocPage.content}} link">
               <span>{{tocPage.id}}</span>
               {{tocPage.content}}
             </a>
             <ul ng-if="tocPage.children" class="contentTocChildren">
               <li ng-repeat="tocPageChild in tocPage.children">
-                <a ng-href="{{tocPageChild.link}}" title="{{tocPageChild.content}} link">
+                <a href="{{tocPageChild.link}}" title="{{tocPageChild.content}} link">
                   <span>{{tocPageChild.id}}</span>
                   {{tocPageChild.content}}
                 </a>
                 <ul ng-if="tocPageChild.children" class="contentTocChildren nested">
                   <li ng-repeat="tocPageChildNested in tocPageChild.children">
-                    <a ng-href="{{tocPageChildNested.link}}" title="{{tocPageChildNested.content}} link">
+                    <a href="{{tocPageChildNested.link}}" title="{{tocPageChildNested.content}} link">
                       <span>{{tocPageChildNested.id}}</span>
                       {{tocPageChildNested.content}}
                     </a>

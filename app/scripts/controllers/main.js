@@ -69,11 +69,27 @@ app.controller('mainCtrl', function ($scope, $http) {
    function init(){
 		$(".projects").removeClass('open');
 	  	$('.dashboard').removeClass('modify');
-	  	resetDashboard();
+
+	  	setTimeout(function(){
+	  		$('.dashboard--project').addClass('transi');
+		  	var x = 1;
+		  	var xLength = $('.dashboard--project').length;
+
+		  	function dashboardTransi(x){
+			  	setTimeout(function(){
+			  		if(x<=xLength){
+			  			$('.dashboard--project:nth-child('+x+')').removeClass('transi');
+			  			x++;
+			  			dashboardTransi(x);
+			  		} else {
+			  			x = 1;
+			  		}
+			  	},100);
+			}
+			dashboardTransi(x);
+		  	resetDashboard();
+		},50);
    }
-
-
-
 
 
 
@@ -112,10 +128,10 @@ app.controller('mainCtrl', function ($scope, $http) {
    	// $('body').css({'background':'#eee'});
 
 	   // Dashboard Content Click
-	   $('.dashboard-projects .dashboard--project').click(function(){
+	   $scope.projectClick = function(project){
 	   	clicked = true;
 	   	$('.dashboard-projects .dashboard--project').addClass('dashboard--projectNotClicked');
-	   	$(this).removeClass('dashboard--projectNotClicked').addClass('dashboard--projectClicked');
+	   	$('.'+project).removeClass('dashboard--projectNotClicked').addClass('dashboard--projectClicked');
 
 	   	$('.dashboard--projectClicked .dashboard---projectTitle .hrLoader').css({
 		   	'width': '100px',
@@ -129,7 +145,7 @@ app.controller('mainCtrl', function ($scope, $http) {
 		   	$('.dashboard--projectClicked footer')
 		   		.delay(200)
 		   		.queue(function(){
-		   			$(this).css({
+		   			$('.'+project).css({
 				   		'opacity':'0',
 				   		'-moz-transform': 'translateY(40px)',
 				   		'-webkit-transform': 'translateY(40px)',
@@ -138,18 +154,18 @@ app.controller('mainCtrl', function ($scope, $http) {
 				   		'transform': 'translateY(40px)'
 				   	}).dequeue();
 		   		});
+		   		$('.dashboard--projectClicked .dashboard---projectTitle hr').css({
+		   			'opacity':'0'
+		   		});
 		   },200);
 
 	   	setTimeout(function(){
-	   		$('.dashboard--projectClicked .dashboard---projectTitle hr').css({
-	   			'opacity':'0'
-	   		});
 	   		$('.dashboard--projectClicked .dashboard---projectDevelopment')
 	   			.fadeOut('fast');
 	   		$('.dashboard--projectClicked .dashboard---projectTitle h3')
 	   			.delay(200)
 	   			.queue(function(){
-	   				$(this).css({
+	   				$('.'+project).css({
 			   			'opacity':'0',
 			   			'-moz-transform': 'translateY(40px)',
 			   			'-webkit-transform': 'translateY(40px)',
@@ -161,16 +177,15 @@ app.controller('mainCtrl', function ($scope, $http) {
 	   		$('.dashboard--projectClicked .dashboard---projectTitle h2')
 	   			.delay(400)
 	   			.queue(function(){
-	   				$(this).css({'opacity':'0'}).dequeue();
+	   				$('.'+project).css({'opacity':'0'}).dequeue();
 	   			});
 	     	},400);
 	     	setTimeout(function(){
-	   		$('.dashboard--projectClicked').css({
+	   		$('.dashboard').css({
 	   			'opacity':'0'
 	   		});
 	   	},600);
 	   	setTimeout(function(){
-
 	   		function dirname(path){
 	   			return path.replace(/\\/g,'/').replace(/\/[^\/]*$/, '');
 	   		}
@@ -179,8 +194,8 @@ app.controller('mainCtrl', function ($scope, $http) {
 		  		var dirPath = dirname(location.href);
 		  		var fullPath = dirPath + "/" + project;
 	  		   window.location=fullPath;
-	  		},1200);
-	   });
+	  		},800);
+	   };
    }
 
 

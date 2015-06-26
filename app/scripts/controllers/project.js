@@ -24,30 +24,27 @@ app.controller('projectCtrl', function ($scope, $http, $routeParams) {
    		openProject(self.project);
    	});
 
-	   // $scope.showLinkDev = function(project) {
-	   // 	return project.hasOwnProperty('linkDev');
-	   // }
 
-
-	   // if (window.history && window.history.pushState) {
-	   // 	$(window).on('popstate', function() {
-	   // 		init();
-	   // 	});
-	   // }
-
-
-   // function init(){
-	  //  var project = document.location.href;
-	  //  project = project.split('/');
-	  //  project = project[project.length - 1];
-	  //  console.log(project);
-	  //  openProject(project);
-   // }
    function openProject(project){
    	$('.dashboard').addClass('modify');
    	setTimeout(function(){
    		$('#'+project).removeClass('hide');
    		$(".projects").addClass('open');
+
+   		$('a').click(function(e){
+   			e.preventDefault();
+   			var eLink = $(this).attr('href');
+   			var eLinkBlank = $(this).attr('target');
+   			$('.projects').removeClass('open');
+   			setTimeout(function(){
+   				if(eLinkBlank == '_blank'){
+   					window.open(eLink);
+   				} else {
+   					window.location = eLink;
+   				}
+   			},300)
+   		});
+
    	},100);
    }
 
