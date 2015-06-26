@@ -6,6 +6,7 @@
 	background: #fff;
 	padding: 20px;
 	width: 70%;
+	@include transition(all 0.2s ease-out);
 
   header {
   	margin-bottom: 4.8rem;
@@ -108,6 +109,7 @@
   	  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   	  letter-spacing: 0px;
   	  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  	  @include transition(all 0.2s ease-out);
   	  &:first-child { margin-top: 250px; }
   	}
   	div.content {
@@ -220,6 +222,63 @@ footer {
 /* -------------------------------------------------- */
 
 
-@media screen and (max-width: 1050px){
-	@include column-count(1 !important);
+@media screen and (max-width: 1100px){
+	main div.content p {
+		@include column-count(1 !important);
+	}
+}
+@media screen and (max-width: 900px){
+	.project  {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 750px){
+	.project  {
+		width: 90%;
+		header .project--projectTitle h1 {
+			font-size: 10rem;
+		}
+		ul.project-date,
+		ul.project-links {
+			float: none;
+			li {
+				text-align: center;
+				margin: 10px auto;
+				font-size: 1.6rem;
+			}
+		}
+		main h2:first-child {
+			margin-top: 110px;
+		}
+	}
+}
+@media screen and (max-width: 600px){
+	.project  {
+		width: 96%;
+		header .project--projectTitle h1 {
+			font-size: 8rem;
+		}
+		main h2 { font-size: 4rem; }
+	}
+}
+@media screen and (max-width: 450px){
+	.project main div.content p {
+		font-size: 1.6rem;
+	}
+}
+@media screen and (max-width: 400px){
+	.project {
+		header .project--projectTitle h1 {
+			font-size: 6rem;
+		}
+		main {
+			h2 {
+				font-size: 3rem;
+				text-align: center;
+			}
+			div.content p {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }

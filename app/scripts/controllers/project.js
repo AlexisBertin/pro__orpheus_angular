@@ -10,9 +10,6 @@ app.controller('projectCtrl', function ($scope, $http, $routeParams) {
 	var self = this;
 	self.project = $routeParams.project;
 
-	console.log(self.project);
-
-
    $http.get('data/projects.json')
    	.success(function(data){
    		$scope.projects = data;
@@ -47,7 +44,6 @@ app.controller('projectCtrl', function ($scope, $http, $routeParams) {
 	  //  openProject(project);
    // }
    function openProject(project){
-   	console.log(project);
    	$('.dashboard').addClass('modify');
    	setTimeout(function(){
    		$('#'+project).removeClass('hide');

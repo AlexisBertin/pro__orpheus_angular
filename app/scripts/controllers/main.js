@@ -46,6 +46,7 @@ app.controller('mainCtrl', function ($scope, $http) {
       var clicked = false;
 		$scope.projectMouseover = function(project){
 			if(clicked === false){
+				clicked = true;
 		  		$('.dashboard-projects .dashboard--project')
 		  			.addClass('dashboard--projectNotHover');
 		  		$('.'+project)
@@ -54,7 +55,8 @@ app.controller('mainCtrl', function ($scope, $http) {
 	  		}
 		}
 		$scope.projectMouseout = function(){
-			if(clicked === false){
+			if(clicked === true){
+				clicked = false;
       		$('.dashboard-projects .dashboard--project')
       		.removeClass('dashboard--projectNotHover')
       		.removeClass('dashboard--projectHover');

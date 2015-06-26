@@ -21,7 +21,7 @@
 
 
   <section class="dashboard-projects">
-    <article ng-repeat="project in projectsDashboard | filter:search | orderBy:project.inDev" class="dashboard--project {{project.value}}" data-value="{{project.value}}" ng-mouseover="projectMouseover(project.value)" ng-mouseout="projectMouseout()">
+    <article ng-repeat="project in projectsDashboard | filter:search | orderBy:project.inDev" class="dashboard--project {{project.value}}" data-value="{{project.value}}" ng-mouseenter="projectMouseover(project.value)" ng-mouseleave="projectMouseout()">
       <i ng-if="project.inDev" class="fa fa-code dashboard---projectDevelopment"></i>
       <div class="dashboard---projectTitle">
         <h2>{{project.name}}</h2>
