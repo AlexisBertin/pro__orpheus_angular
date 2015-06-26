@@ -25,63 +25,79 @@ body > header {
   position: fixed;
   z-index: 1000;
   background-color: rgba(238, 238, 238, 0.5);
-  .header-logo {
+  .header-links {
     display: block;
     height: 100%;
-    width: 50px;
-    background: $blue;
     overflow: hidden;
     float: left;
     text-decoration: none;
-    img {
-      width: 35px;
-      margin: auto;
-      opacity: 1;
-      @include transform(translateY(-50%));
-    }
-    .fa-home {
-      color: rgba(255,255,255,1);
-      font-size: 2.4rem;
-      text-align: center;
-      margin-left: -3px;
-      margin-top: -1px;
-      opacity: 0;
-      @include transform(translateY(50%));
-    }
-    img, .fa-home {
-      display: block;
-      position: relative;
-      top: 50%;
-      @include transition(all 0.2s ease-out);
-    }
-    h1 {
-      @extend .verticalAlign;
-      position: absolute;
-      font-size: 2.4rem;
-      line-height: 50px;
-      vertical-align: middle;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: rgba(0, 0, 0, 0.8);
-      font-family: $font-serif;
-      /*font-weight: 700;*/
-      display: block;
-      margin-top: auto;
-      padding: 0 10px;
-      margin-left: 50px;
-    }
 
     &:hover {
-      img {
+      .header--logo img {
         @include transform(translateY(-200%));
         opacity: 0;
       }
-      .fa-home {
-        @include transform(translateY(-115%));
+      .header--logo .fa-home {
+        @include transform(translateY(-50%));
         opacity: 1;
       }
     }
+
+    .header--logo {
+      width: 50px;
+      background: $blue;
+      height: 100%;
+      img {
+        width: 35px;
+        margin: auto;
+        opacity: 1;
+        display: block;
+        position: absolute;
+        left: 7.5px;
+        top: 0;
+        bottom: 0;
+        @include transition(all 0.2s ease-out);
+      }
+      .fa-home {
+        color: rgba(255,255,255,1);
+        font-size: 2.4rem;
+        text-align: center;
+        margin-top: -1px;
+        opacity: 0;
+        @include transform(translateY(50%));
+        display: block;
+        position: absolute;
+        width: 50px;
+        top: 50%;
+        @include transition(all 0.2s ease-out);
+      }
+    }
+    h1 {
+      @extend .verticalAlign;
+      display: inline-block;
+      font-size: 2.4rem;
+      line-height: 49px;
+      vertical-align: middle;
+      background-color: white;
+      color: rgba(0, 0, 0, 0.8);
+      font-family: Georgia, serif;
+      padding: 0 10px;
+      margin-left: 50px;
+      margin-top: -25px;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
   }
 
+  .breadcrumb_project {
+    float: left;
+    background-color: rgba(63, 81, 181, 0.8);
+    color: rgba(255,255,255,1);
+    font-family: $font-serif;
+    font-size: 2.4rem;
+    line-height: 50px;
+    vertical-align: middle;
+  }
 }
 
 

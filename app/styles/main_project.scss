@@ -43,6 +43,7 @@
   	    font-family: $font-serif;
   	    color: rgba(0,0,0,1);
   	    margin-bottom: 0.8rem;
+  	    @include transition(font-size 0.2s ease-out);
   	  }
   	  h3 {
   	    color: rgba(0,0,0,0.4);
