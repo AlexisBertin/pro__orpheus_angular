@@ -47,12 +47,8 @@ app.controller('projectCtrl', function ($scope, $http, $routeParams) {
 	  //  openProject(project);
    // }
    function openProject(project){
-   	console.log(project);
-   	$('.dashboard').addClass('modify');
-   	setTimeout(function(){
-   		$('#'+project).removeClass('hide');
-   		$(".projects").addClass('open');
-   	},100);
+   	$('#'+project).removeClass('hide');
+   	$(".projects").addClass('open');
    }
 
 });

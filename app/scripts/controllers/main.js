@@ -46,15 +46,18 @@ app.controller('mainCtrl', function ($scope, $http) {
       var clicked = false;
 		$scope.projectMouseover = function(project){
 			if(clicked === false){
+				clicked = true;
 		  		$('.dashboard-projects .dashboard--project')
 		  			.addClass('dashboard--projectNotHover');
 		  		$('.'+project)
 		  			.removeClass('dashboard--projectNotHover')
 		  			.addClass('dashboard--projectHover');
+		  		console.log(clicked);
 	  		}
 		}
 		$scope.projectMouseout = function(){
-			if(clicked === false){
+			if(clicked === true){
+				clicked = false;
       		$('.dashboard-projects .dashboard--project')
       		.removeClass('dashboard--projectNotHover')
       		.removeClass('dashboard--projectHover');
@@ -94,8 +97,6 @@ app.controller('mainCtrl', function ($scope, $http) {
    	$('.dashboard-projects .dashboard--project')
    		.removeClass('dashboard--projectNotClicked')
    		.removeClass('dashboard--projectClicked');
-   	$('.projects .project').addClass('hide');
-
    	setTimeout(function(){
    		dashboardEvents();
    		// fallback to avoid spam rush
