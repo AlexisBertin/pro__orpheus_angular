@@ -1,7 +1,7 @@
 <div class="projects">
   <article ng-repeat="project in projects" class="project hide" id="{{project.value}}">
     <header>
-      <a href class="project--backDash" title="Back to dashboard">
+      <a href="#/" class="project--backDash" title="Back to dashboard">
         <i class="fa fa-long-arrow-left"></i>
         Back to Dashboard
       </a>
@@ -19,13 +19,13 @@
     </ul>
     <ul class="project-links">
       <li>
-        <a ng-href="{{project.linkProd}}" title="Production Link">
+        <a ng-href="{{project.linkProd}}" target="_blank" title="Production Link">
           <i class="fa fa-link"></i>
           {{project.linkProd}}
         </a>
       </li>
       <!-- <li ng-if="showLinkDev(project)">
-        <a ng-href="project.linkDev" title="Development Link">
+        <a ng-href="project.linkDev" target="_blank" title="Development Link">
           <i class="fa fa-link"></i>
           {{project.linkDev}}
         </a>
@@ -64,5 +64,12 @@
         </ul>
       </div>
     </main>
+
+    <footer>
+    <a href="#/" class="project--backDash" title="Back to dashboard">
+        <i class="fa fa-long-arrow-left"></i>
+        Back to Dashboard
+      </a>
+    </footer>
   </article>
 </div>

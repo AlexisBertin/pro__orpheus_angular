@@ -141,6 +141,9 @@ app.controller('mainCtrl', function ($scope, $http) {
 		   },200);
 
 	   	setTimeout(function(){
+	   		$('.dashboard--projectClicked .dashboard---projectTitle hr').css({
+	   			'opacity':'0'
+	   		});
 	   		$('.dashboard--projectClicked .dashboard---projectDevelopment')
 	   			.fadeOut('fast');
 	   		$('.dashboard--projectClicked .dashboard---projectTitle h3')
@@ -162,9 +165,6 @@ app.controller('mainCtrl', function ($scope, $http) {
 	   			});
 	     	},400);
 	     	setTimeout(function(){
-	   		$('.dashboard--projectClicked .dashboard---projectTitle hr').css({
-	   			'opacity':'0'
-	   		});
 	   		$('.dashboard--projectClicked').css({
 	   			'opacity':'0'
 	   		});

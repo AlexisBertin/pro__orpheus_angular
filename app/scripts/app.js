@@ -18,8 +18,6 @@ var app = angular.module('orpheusHtmlTemplatesApp', [
   ]);
 
   app.config(function ($routeProvider) {
-    // $locationProvider.html5Mode(true).hashPrefix('!');
-
     $routeProvider
       .when('/',{
         templateUrl:'views/main.html',
