@@ -1,0 +1,462 @@
+@font-face {
+  font-family: 'calluna';
+  src: url("fonts/Calluna/Calluna-Regular.otf");
+}
+/* rgba(63,81,181,1); */
+/* line 13, _variables.scss */
+.verticalAlign, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 18, _variables.scss */
+.boxShadowGlobal, .dashboard nav.dashboard-tools > div, .dashboard section.dashboard-projects article.dashboard--project {
+  -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 4, main_dashboard.scss */
+.dashboard {
+  /* ---- Nav - Tools bar ---- */
+  /* ------------------------- */
+  /* ---- Section - Content bar ---- */
+  /* ------------------------------- */
+}
+/* line 7, main_dashboard.scss */
+.dashboard nav.dashboard-tools {
+  display: inline-block;
+  width: 99%;
+  margin: 0 0.5% 12px 0.5%;
+}
+/* line 12, main_dashboard.scss */
+.dashboard nav.dashboard-tools > div {
+  background: #fff;
+  height: 40px;
+  float: left;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 19, main_dashboard.scss */
+.dashboard nav.dashboard-tools > div:not(:last-child) {
+  margin-right: 15px;
+}
+/* line 22, main_dashboard.scss */
+.dashboard nav.dashboard-tools > div span {
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 34, main_dashboard.scss */
+.dashboard nav.dashboard-tools > div:hover span, .dashboard nav.dashboard-tools > div:hover i, .dashboard nav.dashboard-tools > div:focus span, .dashboard nav.dashboard-tools > div:focus i {
+  color: #3F51B5 !important;
+  opacity: 1;
+}
+/* line 41, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search {
+  overflow: hidden;
+}
+/* line 44, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label {
+  margin-bottom: 0;
+}
+/* line 46, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label i.fa {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 54, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label input {
+  width: 0px;
+  opacity: 0;
+  padding: 10px 0;
+  font-size: 1.6rem;
+  color: #3F51B5;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  outline: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 64, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label input::-webkit-input-placeholder {
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  padding-top: 3px;
+}
+/* line 69, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  padding-top: 3px;
+}
+/* line 74, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  padding-top: 3px;
+}
+/* line 79, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  padding-top: 3px;
+}
+/* line 86, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label:hover i, .dashboard nav.dashboard-tools .dashboard--search label:focus,
+.dashboard nav.dashboard-tools .dashboard--search label input:focus * {
+  color: #3F51B5;
+}
+/* line 91, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--search label:hover input,
+.dashboard nav.dashboard-tools .dashboard--search label input:focus {
+  width: 100px;
+  opacity: 1;
+}
+/* line 101, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject {
+  float: right;
+  overflow: hidden;
+  width: 40px;
+  border-radius: 40px;
+}
+/* line 106, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject i.fa, .dashboard nav.dashboard-tools .dashboard--addProject span {
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* line 110, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject:hover {
+  width: 160px;
+  border-radius: 0;
+}
+/* line 113, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject:hover span {
+  margin-right: 0;
+}
+/* line 114, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject:hover i.fa {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+/* line 116, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject i.fa {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+  padding: 10px;
+  cursor: pointer;
+  float: left;
+  margin-top: 2px;
+  margin-left: 3px;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+}
+/* line 126, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject span {
+  padding-left: 0;
+  opacity: 0;
+  float: left;
+  margin-right: -120px;
+}
+/* line 141, main_dashboard.scss */
+.dashboard section.dashboard-projects {
+  background: #fff;
+  margin-bottom: 50px;
+}
+/* line 145, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project {
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 19%;
+  margin: 0.5%;
+  height: 200px;
+  /*border-top: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;*/
+  border-top: 2px solid rgba(255, 255, 255, 0);
+  border-right: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  border-left: 2px solid rgba(255, 255, 255, 0);
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out, -moz-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+/* line 164, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectDevelopment {
+  position: absolute;
+  display: block;
+  padding: 10px 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3F51B5;
+  opacity: 0.6;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+/* line 173, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectDevelopment:after {
+  content: "In development";
+  display: inline-block;
+  position: relative;
+  margin-left: 6px;
+  top: -2px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: rgba(63, 81, 181, 0.8);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+/* line 188, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle {
+  text-align: center;
+  display: block;
+}
+/* line 193, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h2, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h3 {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 197, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h2 {
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Georgia, serif;
+}
+/* line 202, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr {
+  display: block;
+  width: 0px;
+  opacity: 0;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 209, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr.hrLoader {
+  border: 1px solid #3F51B5;
+  margin-top: -26px;
+}
+/* line 214, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h3 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.4);
+  padding-top: 0px;
+}
+/* line 222, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project footer {
+  margin-top: 100px;
+  top: 0;
+  opacity: 0;
+}
+/* line 226, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project footer, .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate, .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate span {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 231, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.2);
+}
+/* line 239, main_dashboard.scss */
+.dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate span {
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* --- Article Hover Styles --- */
+/* line 257, main_dashboard.scss */
+.dashboard--projectHover {
+  border: 2px solid #3F51B5 !important;
+}
+/* line 259, main_dashboard.scss */
+.dashboard--projectHover .dashboard---projectDevelopment {
+  -webkit-transition-delay: 0.5s !important;
+  -moz-transition-delay: 0.5s !important;
+  transition-delay: 0.5s !important;
+  opacity: 1;
+  margin: -1px 0 0 -1px !important;
+}
+/* line 263, main_dashboard.scss */
+.dashboard--projectHover .dashboard---projectDevelopment:after {
+  opacity: 1 !important;
+  -webkit-transform: translateY(0) !important;
+  -moz-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  -o-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+/* line 269, main_dashboard.scss */
+.dashboard--projectHover .dashboard---projectTitle h2 {
+  color: black !important;
+}
+/* line 270, main_dashboard.scss */
+.dashboard--projectHover .dashboard---projectTitle hr:not(.hrLoader) {
+  margin-top: 18px !important;
+  margin-bottom: 24px !important;
+  width: 100px !important;
+  opacity: 1 !important;
+}
+/* line 276, main_dashboard.scss */
+.dashboard--projectHover .dashboard---projectTitle h3 {
+  color: rgba(0, 0, 0, 0.6) !important;
+  padding-top: 4px !important;
+}
+/* line 281, main_dashboard.scss */
+.dashboard--projectHover footer {
+  -webkit-transition-delay: 0.2s !important;
+  -moz-transition-delay: 0.2s !important;
+  transition-delay: 0.2s !important;
+  margin-top: 95px !important;
+  top: 0;
+  opacity: 1 !important;
+}
+/* line 286, main_dashboard.scss */
+.dashboard--projectHover footer .dashboard---lastUpdate {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+/* line 288, main_dashboard.scss */
+.dashboard--projectHover footer .dashboard---lastUpdate span {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 293, main_dashboard.scss */
+.dashboard--projectNotHover .dashboard---projectDevelopment {
+  opacity: 0.2;
+}
+/* line 295, main_dashboard.scss */
+.dashboard--projectNotHover .dashboard---projectTitle h2 {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+/* line 296, main_dashboard.scss */
+.dashboard--projectNotHover .dashboard---projectTitle h3 {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+/* line 298, main_dashboard.scss */
+.dashboard--projectNotHover footer .dashboard---lastUpdate {
+  color: rgba(0, 0, 0, 0.1) !important;
+}
+/* line 300, main_dashboard.scss */
+.dashboard--projectNotHover footer .dashboard---lastUpdate span {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* -------------------- */
+/* --- Article Clicked Styles --- */
+/* line 309, main_dashboard.scss */
+.dashboard--projectClicked,
+.dashboard--projectNotClicked {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+/*.dashboard--projectClicked  {
+  border-top: 1px solid rgba(0,0,0,0) !important;
+  border-right: 1px solid #eee !important;
+  border-bottom: 1px solid #eee !important;
+  border-left: 1px solid rgba(0,0,0,0) !important;
+
+  .dashboard---projectDevelopment {
+    opacity: 0;
+    @include transition-delay(0.2s);
+    @include transform(translateY(-20px));
+  }
+  .dashboard---projectTitle {
+    h2 {
+      @include transition-delay(0.5s);
+      opacity: 0;
+    }
+    hr.hrLoader {
+      width: 100px !important;
+      opacity: 1 !important;
+    }
+    h3 {
+      opacity: 0 !important;
+      @include transition-delay(0.5s);
+      @include transform(translateY(20px));
+    }
+  }
+  footer {
+    opacity: 0 !important;
+    @include transition-delay(0.3s);
+    @include transform(translateY(20px));
+  }
+}
+.dashboard--projectNotClicked {
+  opacity: 0;
+}*/
+/* ------------------------------ */
+@media screen and (max-width: 1500px) {
+  /* line 352, main_dashboard.scss */
+  article.dashboard--project {
+    width: 24% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* line 357, main_dashboard.scss */
+  article.dashboard--project {
+    width: 32.3% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 362, main_dashboard.scss */
+  article.dashboard--project {
+    width: 49% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 367, main_dashboard.scss */
+  article.dashboard--project {
+    width: 99% !important;
+  }
+}
+
+/*# sourceMappingURL=main_dashboard.css.map */

@@ -1,0 +1,368 @@
+@font-face {
+  font-family: 'calluna';
+  src: url("fonts/Calluna/Calluna-Regular.otf");
+}
+/* rgba(63,81,181,1); */
+/* line 13, _variables.scss */
+.verticalAlign {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 18, _variables.scss */
+.boxShadowGlobal {
+  -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 4, main_project.scss */
+.project {
+  margin: 0 auto 150px auto;
+  background: #fff;
+  padding: 20px;
+  width: 70%;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 11, main_project.scss */
+.project header {
+  margin-bottom: 4.8rem;
+}
+/* line 13, main_project.scss */
+.project header .project--backDash {
+  position: absolute;
+  display: block;
+  left: 35px;
+  top: 30px;
+}
+/* line 19, main_project.scss */
+.project header .project--edit {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  display: block;
+  font-size: 2rem;
+  padding: 5px;
+  color: #3F51B5;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 29, main_project.scss */
+.project header .project--edit:hover {
+  opacity: 1;
+}
+/* line 33, main_project.scss */
+.project header .project--projectTitle {
+  text-align: center;
+  display: block;
+  margin-top: 6rem;
+}
+/* line 37, main_project.scss */
+.project header .project--projectTitle, .project header .project--projectTitle h2, .project header .project--projectTitle hr, .project header .project--projectTitle h3 {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 40, main_project.scss */
+.project header .project--projectTitle h1 {
+  font-size: 12rem;
+  line-height: 1.3;
+  font-family: Georgia, serif;
+  color: black;
+  margin-bottom: 0.8rem;
+  -webkit-transition: font-size 0.2s ease-out;
+  -moz-transition: font-size 0.2s ease-out;
+  transition: font-size 0.2s ease-out;
+}
+/* line 48, main_project.scss */
+.project header .project--projectTitle h3 {
+  color: rgba(0, 0, 0, 0.4);
+  padding-top: 0px;
+}
+/* line 55, main_project.scss */
+.project ul.project-date li,
+.project ul.project-links li {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 2.4rem;
+}
+/* line 60, main_project.scss */
+.project ul.project-date li span,
+.project ul.project-links li span {
+  color: rgba(0, 0, 0, 0.8);
+}
+/* line 65, main_project.scss */
+.project ul.project-date {
+  float: left;
+  display: block;
+}
+/* line 68, main_project.scss */
+.project ul.project-date li {
+  text-align: left;
+}
+/* line 70, main_project.scss */
+.project ul.project-date li .project--projectDevelopment {
+  font-weight: bold;
+  color: #3F51B5;
+  font-size: 1.1rem;
+}
+/* line 74, main_project.scss */
+.project ul.project-date li .project--projectDevelopment:after {
+  content: "In development";
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: rgba(63, 81, 181, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  /*opacity: 0;
+  @include transform(translateY(-10px));*/
+}
+/* line 89, main_project.scss */
+.project ul.project-links {
+  float: right;
+  display: block;
+}
+/* line 92, main_project.scss */
+.project ul.project-links li {
+  text-align: right;
+}
+/* line 97, main_project.scss */
+.project main {
+  float: none;
+  clear: both;
+  	/*ul.contentTocChildren {
+  		& > li &:before {
+  			content: '-';
+  			font-weight: 500;
+  			display: inline-block;
+  			font-size: 2rem;
+  			color: rgba(0,0,0,0.3);
+  			margin-left: 25px;
+  		}
+
+  		&.nested > li:before {
+  			content: '--';
+  			font-weight: 500;
+  			display: inline-block;
+  			font-size: 2rem;
+  			color: rgba(0,0,0,0.3);
+  			margin-left: 50px;
+  		}
+  	}*/
+}
+/* line 102, main_project.scss */
+.project main h2 {
+  margin-top: 110px;
+  margin-bottom: 15px;
+  padding-top: 80px;
+  padding-bottom: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  letter-spacing: 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 114, main_project.scss */
+.project main h2:first-child {
+  margin-top: 250px;
+}
+/* line 116, main_project.scss */
+.project main div.content {
+  margin: 0 auto 2.4rem auto;
+}
+/* line 118, main_project.scss */
+.project main div.content p {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Georgia, serif;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+/* line 128, main_project.scss */
+.project main ul.contentToc {
+  margin-top: 30px;
+}
+/* line 131, main_project.scss */
+.project main ul.contentToc li a {
+  font-size: 1.8rem;
+  display: block;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  font-family: Georgia, serif;
+}
+/* line 139, main_project.scss */
+.project main ul.contentToc li a:hover {
+  color: #000;
+}
+/* line 141, main_project.scss */
+.project main ul.contentToc li a:hover span {
+  margin-right: 10px;
+}
+/* line 146, main_project.scss */
+.project main ul.contentToc li a, .project main ul.contentToc li a span {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+/* line 148, main_project.scss */
+.project main ul.contentToc li a span {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  margin-right: 5px;
+  color: #3F51B5;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 160, main_project.scss */
+.project main ul.contentTocChildren li a {
+  padding: 10px 5px 10px 40px;
+}
+/* line 161, main_project.scss */
+.project main ul.contentTocChildren.nested li a {
+  padding: 10px 5px 10px 80px;
+}
+
+/* line 190, main_project.scss */
+footer .project--backDash {
+  position: absolute;
+  display: block;
+  left: 35px;
+  bottom: 50px;
+}
+
+/* --- Back to Dashboard button - Header & Footer --- */
+/* line 201, main_project.scss */
+.project header .project--backDash,
+footer .project--backDash {
+  position: absolute;
+  display: block;
+  padding: 10px 5px;
+  color: rgba(63, 81, 181, 0.6);
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+/* line 209, main_project.scss */
+.project header .project--backDash:hover,
+footer .project--backDash:hover {
+  color: #3F51B5;
+}
+/* line 211, main_project.scss */
+.project header .project--backDash:hover i.fa,
+footer .project--backDash:hover i.fa {
+  margin-right: 10px;
+}
+/* line 213, main_project.scss */
+.project header .project--backDash, .project header .project--backDash i.fa,
+footer .project--backDash,
+footer .project--backDash i.fa {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 217, main_project.scss */
+.project header .project--backDash i.fa,
+footer .project--backDash i.fa {
+  color: #3F51B5;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* -------------------------------------------------- */
+@media screen and (max-width: 1100px) {
+  /* line 227, main_project.scss */
+  main div.content p {
+    -webkit-column-count: 1 !important;
+    -moz-column-count: 1 !important;
+    column-count: 1 !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 232, main_project.scss */
+  .project {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 237, main_project.scss */
+  .project {
+    width: 90%;
+  }
+  /* line 239, main_project.scss */
+  .project header .project--projectTitle h1 {
+    font-size: 10rem;
+  }
+  /* line 242, main_project.scss */
+  .project ul.project-date,
+  .project ul.project-links {
+    float: none;
+  }
+  /* line 245, main_project.scss */
+  .project ul.project-date li,
+  .project ul.project-links li {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 1.6rem;
+  }
+  /* line 251, main_project.scss */
+  .project main h2:first-child {
+    margin-top: 110px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 257, main_project.scss */
+  .project {
+    width: 96%;
+  }
+  /* line 259, main_project.scss */
+  .project header .project--projectTitle h1 {
+    font-size: 8rem;
+  }
+  /* line 262, main_project.scss */
+  .project main h2 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  /* line 266, main_project.scss */
+  .project main div.content p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 272, main_project.scss */
+  .project header .project--projectTitle h1 {
+    font-size: 6rem;
+  }
+  /* line 276, main_project.scss */
+  .project main h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  /* line 280, main_project.scss */
+  .project main div.content p {
+    font-size: 1.4rem;
+  }
+}
+
+/*# sourceMappingURL=main_project.css.map */
