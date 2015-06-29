@@ -47,6 +47,8 @@ body > header {
       width: 50px;
       background: $blue;
       height: 100%;
+      display: block;
+      float: left;
       img {
         width: 35px;
         margin: auto;
@@ -82,8 +84,6 @@ body > header {
       color: rgba(0, 0, 0, 0.8);
       font-family: Georgia, serif;
       padding: 0 10px;
-      margin-left: 50px;
-      margin-top: -25px;
       border-right: 1px solid #eee;
       border-bottom: 1px solid #eee;
     }
