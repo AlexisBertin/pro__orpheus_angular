@@ -5,20 +5,26 @@
 
 /* ---- Nav - Tools bar ---- */
   nav.dashboard-tools {
+    position: fixed;
     display: inline-block;
-    width: 99%;
-    margin: 0 0.5% 12px 0.5%;
+    width: calc(100% - 160px);
+    top: 0;
+    border-bottom: 1px solid $greyBorder;
+    /*margin: 0 0.5% 12px 0.5%;*/
+    height: 50px;
+    margin-left: 160px;
+    background-color: #fff;
+    z-index: 1;
 
     & > div {
       background: #fff;
-      @extend .boxShadowGlobal;
-      height: 40px;
-      float: left;
+      /*@extend .boxShadowGlobal;*/
+      padding: 4px 0 6px 0px;
+      height: 49px;
+      float: right;
       @include transition(all 0.2s ease-out);
+      border-left: 1px solid $greyBorder;
 
-      &:not(:last-child){
-        margin-right: 15px;
-      }
       span {
         display: inline-block;
         height: 100%;
@@ -40,12 +46,12 @@
 
     .dashboard--search {
       overflow: hidden;
-
+      padding: 4px 0 6px 9px;
       label {
         margin-bottom: 0;
         i.fa {
-          color: rgba(0,0,0,0.4);
-          font-size: 2rem;
+          color: rgba(0,0,0,0.2);
+          font-size: 1.6rem;
           padding: 10px;
           cursor: pointer;
           @include transition(all 0.2s ease-out);
@@ -65,22 +71,22 @@
           &::-webkit-input-placeholder {
             color: rgba(63,81,181,0.6);
             font-weight: 100;
-            padding-top: 3px;
+            margin-top: -2px;
           }
           &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
             color: rgba(63,81,181,0.6);
             font-weight: 100;
-            padding-top: 3px;
+            margin-top: -2px;
           }
           &::-moz-placeholder { /* Mozilla Firefox 19+ */
             color: rgba(63,81,181,0.6);
             font-weight: 100;
-            padding-top: 3px;
+            margin-top: -2px;
           }
           &:-ms-input-placeholder { /* Internet Explorer 10+ */
             color: rgba(63,81,181,0.6);
             font-weight: 100;
-            padding-top: 3px;
+            margin-top: -2px;
           }
         }
 
@@ -102,27 +108,23 @@
     .dashboard--addProject {
       float: right;
       overflow: hidden;
-      width: 40px;
-      border-radius: 40px;
+      width: 50px;
       & i.fa,
       & span {
         @include transition(all 0.4s ease-out);
       }
       &:hover {
-        width: 160px;
-        border-radius: 0;
+        width: 180px;
         span { margin-right: 0; }
-        i.fa { @include transform(rotate(360deg)); }
       }
       i.fa {
         color: rgba(0,0,0,0.4);
         font-size: 1.8rem;
-        padding: 10px;
+        padding: 10px 15px;
         cursor: pointer;
         float: left;
         margin-top: 2px;
         margin-left: 3px;
-        @include transform-origin(center center);
       }
       span {
         padding-left: 0;
@@ -151,15 +153,15 @@
       width: 19%;
       margin: 0.5%;
       height: 200px;
-      /*border-top: 1px solid #e5e5e5;
-      border-right: 1px solid #e5e5e5;
-      border-bottom: 1px solid #e5e5e5;
-      border-left: 1px solid #e5e5e5;*/
-      border-top: 2px solid rgba(255,255,255,0);
+      border-top: 1px solid $greyBorder;
+      border-right: 1px solid $greyBorder;
+      border-bottom: 1px solid $greyBorder;
+      border-left: 1px solid $greyBorder;
+      /*border-top: 2px solid rgba(255,255,255,0);
       border-right: 2px solid rgba(255,255,255,0);
       border-bottom: 2px solid rgba(255,255,255,0);
       border-left: 2px solid rgba(255,255,255,0);
-      @extend .boxShadowGlobal;
+      @extend .boxShadowGlobal;*/
       @include transition(opacity 0.2s ease-out, transform 0.2s ease-out);
 
       .dashboard---projectDevelopment {
