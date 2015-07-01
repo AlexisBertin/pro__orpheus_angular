@@ -9000,8 +9000,8 @@ table {
 /* line 111, main_dashboard.scss */
 .dashboard nav.dashboard-tools .dashboard--addProject {
   float: right;
-  overflow: hidden;
   width: 50px;
+  padding: 0;
 }
 /* line 115, main_dashboard.scss */
 .dashboard nav.dashboard-tools .dashboard--addProject i.fa, .dashboard nav.dashboard-tools .dashboard--addProject span {
@@ -9010,38 +9010,64 @@ table {
   transition: all 0.4s ease-out;
 }
 /* line 119, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject:hover {
-  width: 180px;
-}
-/* line 121, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject:hover span {
-  margin-right: 0;
+.dashboard nav.dashboard-tools .dashboard--addProject:hover i.fa:after {
+  opacity: 1;
+  top: 100px;
 }
 /* line 123, main_dashboard.scss */
 .dashboard nav.dashboard-tools .dashboard--addProject i.fa {
   color: rgba(0, 0, 0, 0.2);
   font-size: 1.8rem;
-  padding: 10px 15px;
   cursor: pointer;
   float: left;
-  margin-top: 3px;
-  margin-left: 3px;
 }
-/* line 132, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject span {
-  padding-left: 0;
+/* line 128, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject i.fa:before {
+  display: block;
+  position: relative;
+  content: "\f067";
+  margin-top: 0px;
+  padding: 16px 18px 15px 18px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 137, main_dashboard.scss */
+.dashboard nav.dashboard-tools .dashboard--addProject i.fa:after {
+  content: 'Add a project';
+  display: block;
+  position: absolute;
+  padding: 15px 13px;
+  width: 154px;
+  height: 50px;
+  /*opacity: 1;
+  top: 100px;*/
   opacity: 0;
-  float: left;
-  margin-right: -120px;
+  top: -60px;
+  right: -51px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #3F51B5;
+  background-color: #FFF;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: -1;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
 }
-/* line 147, main_dashboard.scss */
+/* line 169, main_dashboard.scss */
 .dashboard section.dashboard-projects {
   background: #fff;
   margin-bottom: 50px;
   z-index: 10;
   position: relative;
 }
-/* line 153, main_dashboard.scss */
+/* line 175, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project {
   overflow: hidden;
   cursor: pointer;
@@ -9063,7 +9089,7 @@ table {
   -moz-transition: opacity 0.2s ease-out, -moz-transform 0.2s ease-out;
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
-/* line 172, main_dashboard.scss */
+/* line 194, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectDevelopment {
   position: absolute;
   display: block;
@@ -9076,7 +9102,7 @@ table {
   -moz-transition: -moz-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
 }
-/* line 181, main_dashboard.scss */
+/* line 203, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectDevelopment:after {
   content: "In development";
   display: inline-block;
@@ -9096,24 +9122,24 @@ table {
   -o-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 196, main_dashboard.scss */
+/* line 218, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle {
   text-align: center;
   display: block;
 }
-/* line 201, main_dashboard.scss */
+/* line 223, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h2, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h3 {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 205, main_dashboard.scss */
+/* line 227, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h2 {
   font-size: 3rem;
   color: rgba(0, 0, 0, 0.8);
   font-family: "Playfair Display", Georgia, serif;
 }
-/* line 210, main_dashboard.scss */
+/* line 232, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr {
   display: block;
   width: 0px;
@@ -9122,12 +9148,12 @@ table {
   margin-bottom: 15px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 217, main_dashboard.scss */
+/* line 239, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr.hrLoader {
   border: 1px solid #3F51B5;
   margin-top: -26px;
 }
-/* line 222, main_dashboard.scss */
+/* line 244, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h3 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
@@ -9135,19 +9161,19 @@ table {
   color: rgba(0, 0, 0, 0.4);
   padding-top: 0px;
 }
-/* line 230, main_dashboard.scss */
+/* line 252, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer {
   margin-top: 100px;
   top: 0;
   opacity: 0;
 }
-/* line 234, main_dashboard.scss */
+/* line 256, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer, .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate, .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate span {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 239, main_dashboard.scss */
+/* line 261, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate {
   bottom: 10px;
   width: 100%;
@@ -9157,18 +9183,18 @@ table {
   font-style: italic;
   color: rgba(0, 0, 0, 0.2);
 }
-/* line 247, main_dashboard.scss */
+/* line 269, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate span {
   font-style: normal;
   color: rgba(0, 0, 0, 0.4);
 }
 
 /* --- Article Hover Styles --- */
-/* line 265, main_dashboard.scss */
+/* line 287, main_dashboard.scss */
 .dashboard--projectHover {
   border: 2px solid #3F51B5 !important;
 }
-/* line 267, main_dashboard.scss */
+/* line 289, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectDevelopment {
   -webkit-transition-delay: 0.5s !important;
   -moz-transition-delay: 0.5s !important;
@@ -9176,7 +9202,7 @@ table {
   opacity: 1;
   margin: -1px 0 0 -1px !important;
 }
-/* line 271, main_dashboard.scss */
+/* line 293, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectDevelopment:after {
   opacity: 1 !important;
   -webkit-transform: translateY(0) !important;
@@ -9185,23 +9211,23 @@ table {
   -o-transform: translateY(0) !important;
   transform: translateY(0) !important;
 }
-/* line 277, main_dashboard.scss */
+/* line 299, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectTitle h2 {
   color: black !important;
 }
-/* line 278, main_dashboard.scss */
+/* line 300, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectTitle hr:not(.hrLoader) {
   margin-top: 18px !important;
   margin-bottom: 24px !important;
   width: 100px !important;
   opacity: 1 !important;
 }
-/* line 284, main_dashboard.scss */
+/* line 306, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectTitle h3 {
   color: rgba(0, 0, 0, 0.6) !important;
   padding-top: 4px !important;
 }
-/* line 289, main_dashboard.scss */
+/* line 311, main_dashboard.scss */
 .dashboard--projectHover footer {
   -webkit-transition-delay: 0.2s !important;
   -moz-transition-delay: 0.2s !important;
@@ -9210,39 +9236,39 @@ table {
   top: 0;
   opacity: 1 !important;
 }
-/* line 294, main_dashboard.scss */
+/* line 316, main_dashboard.scss */
 .dashboard--projectHover footer .dashboard---lastUpdate {
   color: rgba(0, 0, 0, 0.4) !important;
 }
-/* line 296, main_dashboard.scss */
+/* line 318, main_dashboard.scss */
 .dashboard--projectHover footer .dashboard---lastUpdate span {
   color: rgba(0, 0, 0, 0.6) !important;
 }
 
-/* line 301, main_dashboard.scss */
+/* line 323, main_dashboard.scss */
 .dashboard--projectNotHover .dashboard---projectDevelopment {
   opacity: 0.2;
 }
-/* line 303, main_dashboard.scss */
+/* line 325, main_dashboard.scss */
 .dashboard--projectNotHover .dashboard---projectTitle h2 {
   color: rgba(0, 0, 0, 0.2) !important;
 }
-/* line 304, main_dashboard.scss */
+/* line 326, main_dashboard.scss */
 .dashboard--projectNotHover .dashboard---projectTitle h3 {
   color: rgba(0, 0, 0, 0.2) !important;
 }
-/* line 306, main_dashboard.scss */
+/* line 328, main_dashboard.scss */
 .dashboard--projectNotHover footer .dashboard---lastUpdate {
   color: rgba(0, 0, 0, 0.1) !important;
 }
-/* line 308, main_dashboard.scss */
+/* line 330, main_dashboard.scss */
 .dashboard--projectNotHover footer .dashboard---lastUpdate span {
   color: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* -------------------- */
 /* --- Article Clicked Styles --- */
-/* line 317, main_dashboard.scss */
+/* line 339, main_dashboard.scss */
 .dashboard--projectClicked,
 .dashboard--projectNotClicked {
   -webkit-transition: all 0.2s ease-out;
@@ -9252,7 +9278,7 @@ table {
 
 /* ------------------------------ */
 /* ------ Dashboard Overlay ------ */
-/* line 328, main_dashboard.scss */
+/* line 350, main_dashboard.scss */
 .dashboard-overlay {
   position: fixed;
   width: 100%;
@@ -9261,14 +9287,14 @@ table {
   z-index: 20;
   background: white;
 }
-/* line 336, main_dashboard.scss */
+/* line 358, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject {
   position: relative;
   width: calc(100% - 100px);
   height: calc(100% - 50px);
   margin: 50px auto 0 auto;
 }
-/* line 342, main_dashboard.scss */
+/* line 364, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject h2 {
   font-family: "Playfair Display", Georgia, serif;
   color: #000000;
@@ -9278,7 +9304,7 @@ table {
   /*border-bottom: 1px solid #E2E2E2;*/
   margin-top: 80px;
 }
-/* line 351, main_dashboard.scss */
+/* line 373, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form {
   position: absolute;
   display: block;
@@ -9291,7 +9317,7 @@ table {
   bottom: 0;
   left: 0;
 }
-/* line 364, main_dashboard.scss */
+/* line 386, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input {
   position: relative;
   display: inline-block;
@@ -9300,7 +9326,7 @@ table {
   overflow: hidden;
   padding-top: 1em;
 }
-/* line 373, main_dashboard.scss */
+/* line 395, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input__field {
   position: relative;
   display: block;
@@ -9315,11 +9341,11 @@ table {
   color: 000;
   font-size: 2rem;
 }
-/* line 388, main_dashboard.scss */
+/* line 410, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input__field:focus {
   outline: none;
 }
-/* line 392, main_dashboard.scss */
+/* line 414, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input__label {
   float: right;
   color: rgba(0, 0, 0, 0.8);
@@ -9347,14 +9373,14 @@ table {
   -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
 }
-/* line 421, main_dashboard.scss */
+/* line 443, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input__label-content {
   position: relative;
   display: block;
   padding: 1.6em 0;
   width: 100%;
 }
-/* line 428, main_dashboard.scss */
+/* line 450, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .graphic {
   position: absolute;
   top: 3px;
@@ -9367,19 +9393,19 @@ table {
   -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
 }
-/* line 441, main_dashboard.scss */
+/* line 463, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .icon {
   color: #ddd;
   font-size: 150%;
 }
-/* line 447, main_dashboard.scss */
+/* line 469, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input__field:focus + .input__label,
 .dashboard-overlay .dashboard--newProject form .input--filled .input__label {
   color: #D5D5D5;
   -webkit-transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
   transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
 }
-/* line 454, main_dashboard.scss */
+/* line 476, main_dashboard.scss */
 .dashboard-overlay .dashboard--newProject form .input__field:focus ~ .graphic,
 .dashboard-overlay .dashboard--newProject form .input--filled .graphic {
   stroke: #D5D5D5;
@@ -9389,25 +9415,25 @@ table {
 
 /* ------------------------------- */
 @media screen and (max-width: 1500px) {
-  /* line 471, main_dashboard.scss */
+  /* line 493, main_dashboard.scss */
   article.dashboard--project {
     width: 24% !important;
   }
 }
 @media screen and (max-width: 1200px) {
-  /* line 476, main_dashboard.scss */
+  /* line 498, main_dashboard.scss */
   article.dashboard--project {
     width: 32.3% !important;
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 481, main_dashboard.scss */
+  /* line 503, main_dashboard.scss */
   article.dashboard--project {
     width: 49% !important;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 486, main_dashboard.scss */
+  /* line 508, main_dashboard.scss */
   article.dashboard--project {
     width: 99% !important;
   }

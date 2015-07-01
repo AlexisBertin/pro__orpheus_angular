@@ -110,30 +110,52 @@
 
     .dashboard--addProject {
       float: right;
-      overflow: hidden;
       width: 50px;
+      padding: 0;
       & i.fa,
       & span {
         @include transition(all 0.4s ease-out);
       }
-      &:hover {
-        width: 180px;
-        span { margin-right: 0; }
+      &:hover i.fa:after {
+        opacity: 1;
+        top: 100px;
       }
       i.fa {
         color: rgba(0,0,0,0.2);
         font-size: 1.8rem;
-        padding: 10px 15px;
         cursor: pointer;
         float: left;
-        margin-top: 3px;
-        margin-left: 3px;
-      }
-      span {
-        padding-left: 0;
-        opacity: 0;
-        float: left;
-        margin-right: -120px;
+        &:before {
+          display: block;
+          position: relative;
+          content: "\f067";
+          margin-top: 0px;
+          padding: 16px 18px 15px 18px;
+          background-color: #fff;
+          border-bottom: 1px solid $greyBorder;
+        }
+        &:after {
+          content: 'Add a project';
+          display: block;
+          position: absolute;
+          padding: 15px 13px;
+          width: 154px;
+          height: 50px;
+          /*opacity: 1;
+          top: 100px;*/
+          opacity: 0;
+          top: -60px;
+          right: -51px;
+          font-family: $font-sansserif;
+          text-align: center;
+          color: $blue;
+          background-color: #FFF;
+          border-bottom: 1px solid $greyBorder;
+          border-right: 1px solid $greyBorder;
+          @include transform(rotate(90deg));
+          z-index: -1;
+          @include transition(all 0.4s cubic-bezier(.39,.01,.2,.98));
+        }
       }
     }
   }
