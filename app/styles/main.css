@@ -8774,6 +8774,7 @@ button.close {
   src: url("fonts/Calluna/Calluna-Regular.otf");
 }
 /* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
 /* --- Dashboard z-index --- */
 /* ------------------------- */
 /* line 22, _variables.scss */
@@ -8855,6 +8856,7 @@ table {
   src: url("fonts/Calluna/Calluna-Regular.otf");
 }
 /* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
 /* --- Dashboard z-index --- */
 /* ------------------------- */
 /* line 22, _variables.scss */
@@ -8876,198 +8878,17 @@ table {
 
 /* line 4, main_dashboard.scss */
 .dashboard {
-  /* ---- Nav - Tools bar ---- */
-  /* ------------------------- */
   /* ---- Section - Content bar ---- */
   /* ------------------------------- */
 }
-/* line 7, main_dashboard.scss */
-.dashboard nav.dashboard-tools {
-  position: fixed;
-  display: inline-block;
-  width: calc(100% - 160px);
-  top: 0;
-  border-bottom: 1px solid #e5e5e5;
-  /*margin: 0 0.5% 12px 0.5%;*/
-  height: 50px;
-  margin-left: 160px;
-  background-color: #fff;
-  z-index: 50;
-}
-/* line 19, main_dashboard.scss */
-.dashboard nav.dashboard-tools > div {
-  background: #fff;
-  /*@extend .boxShadowGlobal;*/
-  padding: 3px 0 7px 0px;
-  height: 49px;
-  float: right;
-  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  border-left: 1px solid #e5e5e5;
-  cursor: pointer;
-}
-/* line 29, main_dashboard.scss */
-.dashboard nav.dashboard-tools > div span {
-  display: inline-block;
-  height: 100%;
-  padding: 10px;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-/* line 42, main_dashboard.scss */
-.dashboard nav.dashboard-tools > div:hover span, .dashboard nav.dashboard-tools > div:hover i, .dashboard nav.dashboard-tools > div:focus span, .dashboard nav.dashboard-tools > div:focus i {
-  color: #3F51B5 !important;
-  opacity: 1;
-}
-/* line 49, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search {
-  overflow: hidden;
-  padding: 4px 0 6px 9px;
-  cursor: text;
-}
-/* line 53, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label {
-  margin-bottom: 0;
-}
-/* line 55, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label i.fa {
-  cursor: text;
-  color: rgba(0, 0, 0, 0.2);
-  font-size: 1.6rem;
-  padding: 10px;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-/* line 63, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label input {
-  width: 0px;
-  opacity: 0;
-  padding: 8px 5px 12px 0;
-  line-height: 1.5;
-  font-size: 1.6rem;
-  color: #3F51B5;
-  background: rgba(255, 255, 255, 0);
-  border: 0;
-  outline: 0;
-  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-}
-/* line 74, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label input::-webkit-input-placeholder {
-  color: rgba(63, 81, 181, 0.6);
-  font-weight: 100;
-  margin-top: -2px;
-}
-/* line 79, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label input:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: rgba(63, 81, 181, 0.6);
-  font-weight: 100;
-  margin-top: -2px;
-}
-/* line 84, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label input::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: rgba(63, 81, 181, 0.6);
-  font-weight: 100;
-  margin-top: -2px;
-}
-/* line 89, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search label input:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: rgba(63, 81, 181, 0.6);
-  font-weight: 100;
-  margin-top: -2px;
-}
-/* line 97, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search:hover label i, .dashboard nav.dashboard-tools .dashboard--search:focus,
-.dashboard nav.dashboard-tools .dashboard--search input:focus * {
-  color: #3F51B5;
-}
-/* line 102, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--search:hover label input,
-.dashboard nav.dashboard-tools .dashboard--search input:focus {
-  width: 100px;
-  opacity: 1;
-}
-/* line 111, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject {
-  float: right;
-  width: 50px;
-  padding: 0;
-}
-/* line 115, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject i.fa, .dashboard nav.dashboard-tools .dashboard--addProject span {
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-}
-/* line 119, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject:hover i.fa:after {
-  opacity: 1;
-  top: 100px;
-}
-/* line 123, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject i.fa {
-  color: rgba(0, 0, 0, 0.2);
-  font-size: 1.8rem;
-  cursor: pointer;
-  float: left;
-}
-/* line 128, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject i.fa:before {
-  display: block;
-  position: relative;
-  content: "\f067";
-  margin-top: 0px;
-  padding: 16px 18px 15px 18px;
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
-}
-/* line 137, main_dashboard.scss */
-.dashboard nav.dashboard-tools .dashboard--addProject i.fa:after {
-  content: 'Add a project';
-  display: block;
-  position: absolute;
-  padding: 15px 13px;
-  width: 154px;
-  height: 50px;
-  /*opacity: 1;
-  top: 100px;*/
-  opacity: 0;
-  top: -60px;
-  right: -51px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  color: #3F51B5;
-  background-color: #FFF;
-  border-bottom: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-  z-index: -1;
-  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
-}
-/* line 169, main_dashboard.scss */
+/* line 8, main_dashboard.scss */
 .dashboard section.dashboard-projects {
   background: #fff;
   margin-bottom: 50px;
   z-index: 10;
   position: relative;
 }
-/* line 175, main_dashboard.scss */
+/* line 14, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project {
   overflow: hidden;
   cursor: pointer;
@@ -9089,7 +8910,7 @@ table {
   -moz-transition: opacity 0.2s ease-out, -moz-transform 0.2s ease-out;
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
-/* line 194, main_dashboard.scss */
+/* line 33, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectDevelopment {
   position: absolute;
   display: block;
@@ -9102,7 +8923,7 @@ table {
   -moz-transition: -moz-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
 }
-/* line 203, main_dashboard.scss */
+/* line 42, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectDevelopment:after {
   content: "In development";
   display: inline-block;
@@ -9122,24 +8943,24 @@ table {
   -o-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 218, main_dashboard.scss */
+/* line 57, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle {
   text-align: center;
   display: block;
 }
-/* line 223, main_dashboard.scss */
+/* line 62, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h2, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h3 {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 227, main_dashboard.scss */
+/* line 66, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h2 {
   font-size: 3rem;
   color: rgba(0, 0, 0, 0.8);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
 }
-/* line 232, main_dashboard.scss */
+/* line 71, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr {
   display: block;
   width: 0px;
@@ -9148,53 +8969,53 @@ table {
   margin-bottom: 15px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 239, main_dashboard.scss */
+/* line 78, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle hr.hrLoader {
   border: 1px solid #3F51B5;
   margin-top: -26px;
 }
-/* line 244, main_dashboard.scss */
+/* line 83, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle h3 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
   font-weight: 400;
   font-style: italic;
   color: rgba(0, 0, 0, 0.4);
   padding-top: 0px;
 }
-/* line 252, main_dashboard.scss */
+/* line 91, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer {
   margin-top: 100px;
   top: 0;
   opacity: 0;
 }
-/* line 256, main_dashboard.scss */
+/* line 95, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer, .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate, .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate span {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 261, main_dashboard.scss */
+/* line 100, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate {
   bottom: 10px;
   width: 100%;
   text-align: center;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 1.2rem;
   font-style: italic;
   color: rgba(0, 0, 0, 0.2);
 }
-/* line 269, main_dashboard.scss */
+/* line 108, main_dashboard.scss */
 .dashboard section.dashboard-projects article.dashboard--project footer .dashboard---lastUpdate span {
   font-style: normal;
   color: rgba(0, 0, 0, 0.4);
 }
 
 /* --- Article Hover Styles --- */
-/* line 287, main_dashboard.scss */
+/* line 126, main_dashboard.scss */
 .dashboard--projectHover {
   border: 2px solid #3F51B5 !important;
 }
-/* line 289, main_dashboard.scss */
+/* line 128, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectDevelopment {
   -webkit-transition-delay: 0.5s !important;
   -moz-transition-delay: 0.5s !important;
@@ -9202,7 +9023,7 @@ table {
   opacity: 1;
   margin: -1px 0 0 -1px !important;
 }
-/* line 293, main_dashboard.scss */
+/* line 132, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectDevelopment:after {
   opacity: 1 !important;
   -webkit-transform: translateY(0) !important;
@@ -9211,23 +9032,23 @@ table {
   -o-transform: translateY(0) !important;
   transform: translateY(0) !important;
 }
-/* line 299, main_dashboard.scss */
+/* line 138, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectTitle h2 {
   color: black !important;
 }
-/* line 300, main_dashboard.scss */
+/* line 139, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectTitle hr:not(.hrLoader) {
   margin-top: 18px !important;
   margin-bottom: 24px !important;
   width: 100px !important;
   opacity: 1 !important;
 }
-/* line 306, main_dashboard.scss */
+/* line 145, main_dashboard.scss */
 .dashboard--projectHover .dashboard---projectTitle h3 {
   color: rgba(0, 0, 0, 0.6) !important;
   padding-top: 4px !important;
 }
-/* line 311, main_dashboard.scss */
+/* line 150, main_dashboard.scss */
 .dashboard--projectHover footer {
   -webkit-transition-delay: 0.2s !important;
   -moz-transition-delay: 0.2s !important;
@@ -9236,39 +9057,39 @@ table {
   top: 0;
   opacity: 1 !important;
 }
-/* line 316, main_dashboard.scss */
+/* line 155, main_dashboard.scss */
 .dashboard--projectHover footer .dashboard---lastUpdate {
   color: rgba(0, 0, 0, 0.4) !important;
 }
-/* line 318, main_dashboard.scss */
+/* line 157, main_dashboard.scss */
 .dashboard--projectHover footer .dashboard---lastUpdate span {
   color: rgba(0, 0, 0, 0.6) !important;
 }
 
-/* line 323, main_dashboard.scss */
+/* line 162, main_dashboard.scss */
 .dashboard--projectNotHover .dashboard---projectDevelopment {
   opacity: 0.2;
 }
-/* line 325, main_dashboard.scss */
+/* line 164, main_dashboard.scss */
 .dashboard--projectNotHover .dashboard---projectTitle h2 {
   color: rgba(0, 0, 0, 0.2) !important;
 }
-/* line 326, main_dashboard.scss */
+/* line 165, main_dashboard.scss */
 .dashboard--projectNotHover .dashboard---projectTitle h3 {
   color: rgba(0, 0, 0, 0.2) !important;
 }
-/* line 328, main_dashboard.scss */
+/* line 167, main_dashboard.scss */
 .dashboard--projectNotHover footer .dashboard---lastUpdate {
   color: rgba(0, 0, 0, 0.1) !important;
 }
-/* line 330, main_dashboard.scss */
+/* line 169, main_dashboard.scss */
 .dashboard--projectNotHover footer .dashboard---lastUpdate span {
   color: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* -------------------- */
 /* --- Article Clicked Styles --- */
-/* line 339, main_dashboard.scss */
+/* line 178, main_dashboard.scss */
 .dashboard--projectClicked,
 .dashboard--projectNotClicked {
   -webkit-transition: all 0.2s ease-out;
@@ -9277,163 +9098,26 @@ table {
 }
 
 /* ------------------------------ */
-/* ------ Dashboard Overlay ------ */
-/* line 350, main_dashboard.scss */
-.dashboard-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 20;
-  background: white;
-}
-/* line 358, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject {
-  position: relative;
-  width: calc(100% - 100px);
-  height: calc(100% - 50px);
-  margin: 50px auto 0 auto;
-}
-/* line 364, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  color: #000000;
-  font-size: 4rem;
-  line-height: 1.5;
-  padding-bottom: 10px;
-  /*border-bottom: 1px solid #E2E2E2;*/
-  margin-top: 80px;
-}
-/* line 373, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form {
-  position: absolute;
-  display: block;
-  width: 60%;
-  height: 600px;
-  overflow: hidden;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-/* line 386, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  overflow: hidden;
-  padding-top: 1em;
-}
-/* line 395, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input__field {
-  position: relative;
-  display: block;
-  float: right;
-  border: none;
-  border-radius: 0;
-  font-family: "Playfair Display", Georgia, serif;
-  -webkit-appearance: none;
-  padding: 0.5em 0em 0.25em;
-  width: 100%;
-  background: transparent;
-  color: 000;
-  font-size: 2rem;
-}
-/* line 410, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input__field:focus {
-  outline: none;
-}
-/* line 414, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input__label {
-  float: right;
-  color: rgba(0, 0, 0, 0.8);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: absolute;
-  top: -5px;
-  font-size: 2rem;
-  left: 0;
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0em;
-  pointer-events: none;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transition: -webkit-transform 0.3s 0.1s, color 1s;
-  transition: transform 0.3s 0.1s, color 1s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-}
-/* line 443, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input__label-content {
-  position: relative;
-  display: block;
-  padding: 1.6em 0;
-  width: 100%;
-}
-/* line 450, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .graphic {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  fill: none;
-  stroke: #D7D7D7;
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
-  transition: transform 0.7s, stroke 0.7s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-}
-/* line 463, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .icon {
-  color: #ddd;
-  font-size: 150%;
-}
-/* line 469, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input__field:focus + .input__label,
-.dashboard-overlay .dashboard--newProject form .input--filled .input__label {
-  color: #D5D5D5;
-  -webkit-transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
-  transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
-}
-/* line 476, main_dashboard.scss */
-.dashboard-overlay .dashboard--newProject form .input__field:focus ~ .graphic,
-.dashboard-overlay .dashboard--newProject form .input--filled .graphic {
-  stroke: #D5D5D5;
-  -webkit-transform: translate3d(-66.6%, 0, 0);
-  transform: translate3d(-66.6%, 0, 0);
-}
-
-/* ------------------------------- */
 @media screen and (max-width: 1500px) {
-  /* line 493, main_dashboard.scss */
+  /* line 195, main_dashboard.scss */
   article.dashboard--project {
     width: 24% !important;
   }
 }
 @media screen and (max-width: 1200px) {
-  /* line 498, main_dashboard.scss */
+  /* line 200, main_dashboard.scss */
   article.dashboard--project {
     width: 32.3% !important;
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 503, main_dashboard.scss */
+  /* line 205, main_dashboard.scss */
   article.dashboard--project {
     width: 49% !important;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 508, main_dashboard.scss */
+  /* line 210, main_dashboard.scss */
   article.dashboard--project {
     width: 99% !important;
   }
@@ -9443,6 +9127,7 @@ table {
   src: url("fonts/Calluna/Calluna-Regular.otf");
 }
 /* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
 /* --- Dashboard z-index --- */
 /* ------------------------- */
 /* line 22, _variables.scss */
@@ -9517,7 +9202,7 @@ table {
 .project header .project--projectTitle h1 {
   font-size: 12rem;
   line-height: 1.3;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
   color: black;
   margin-bottom: 0.8rem;
   -webkit-transition: font-size 0.2s ease-out;
@@ -9611,7 +9296,7 @@ table {
   padding-top: 80px;
   padding-bottom: 15px;
   color: rgba(0, 0, 0, 0.8);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 5rem;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   letter-spacing: 0px;
@@ -9634,7 +9319,7 @@ table {
   font-size: 1.8rem;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
@@ -9651,7 +9336,7 @@ table {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.4);
   position: relative;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
 }
 /* line 139, main_project.scss */
 .project main ul.contentToc li a:hover {
@@ -9806,12 +9491,397 @@ footer .project--backDash i.fa {
     font-size: 1.4rem;
   }
 }
-/* line 11, main.scss */
+@font-face {
+  font-family: 'calluna';
+  src: url("fonts/Calluna/Calluna-Regular.otf");
+}
+/* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
+/* --- Dashboard z-index --- */
+/* ------------------------- */
+/* line 22, _variables.scss */
+.verticalAlign, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle, body > header .header-links h1 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 27, _variables.scss */
+.boxShadowGlobal {
+  -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ------ Dashboard Overlay ------ */
+/* line 5, main_addProject.scss */
+.addProject {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  background: #3F51B5;
+}
+/* line 13, main_addProject.scss */
+.addProject .addProject-newProject {
+  position: relative;
+  width: calc(100% - 100px);
+  height: calc(100% - 50px);
+  margin: 50px auto 0 auto;
+}
+/* line 19, main_addProject.scss */
+.addProject .addProject-newProject h2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 19rem;
+  height: 89rem;
+  line-height: 1.2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 30, main_addProject.scss */
+.addProject .addProject-newProject form {
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 600px;
+  overflow: hidden;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* line 43, main_addProject.scss */
+.addProject .addProject-newProject form .input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+  padding-top: 1em;
+}
+/* line 52, main_addProject.scss */
+.addProject .addProject-newProject form .input__field {
+  position: relative;
+  display: block;
+  float: right;
+  border: none;
+  border-radius: 0;
+  font-family: Georgia, serif;
+  -webkit-appearance: none;
+  padding: 0.5em 0em 0.25em;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+}
+/* line 67, main_addProject.scss */
+.addProject .addProject-newProject form .input__field:focus {
+  outline: none;
+}
+/* line 71, main_addProject.scss */
+.addProject .addProject-newProject form .input__label {
+  float: right;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: -5px;
+  font-size: 2rem;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0em;
+  pointer-events: none;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 0.3s 0.1s, color 1s;
+  transition: transform 0.3s 0.1s, color 1s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+/* line 100, main_addProject.scss */
+.addProject .addProject-newProject form .input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+/* line 107, main_addProject.scss */
+.addProject .addProject-newProject form .graphic {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  fill: none;
+  stroke: white;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+  transition: transform 0.7s, stroke 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+/* line 120, main_addProject.scss */
+.addProject .addProject-newProject form .icon {
+  color: #ddd;
+  font-size: 150%;
+}
+/* line 126, main_addProject.scss */
+.addProject .addProject-newProject form .input__field:focus + .input__label,
+.addProject .addProject-newProject form .input--filled .input__label {
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
+  transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
+}
+/* line 133, main_addProject.scss */
+.addProject .addProject-newProject form .input__field:focus ~ .graphic,
+.addProject .addProject-newProject form .input--filled .graphic {
+  stroke: rgba(255, 255, 255, 0.6);
+  -webkit-transform: translate3d(-66.6%, 0, 0);
+  transform: translate3d(-66.6%, 0, 0);
+}
+
+/* ------------------------------- */
+@font-face {
+  font-family: 'calluna';
+  src: url("fonts/Calluna/Calluna-Regular.otf");
+}
+/* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
+/* --- Dashboard z-index --- */
+/* ------------------------- */
+/* line 22, _variables.scss */
+.verticalAlign, .dashboard section.dashboard-projects article.dashboard--project .dashboard---projectTitle, body > header .header-links h1 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 27, _variables.scss */
+.boxShadowGlobal {
+  -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Nav - Tools bar ---- */
+/* line 6, element_navBar.scss */
+nav.navBar-tools {
+  position: fixed;
+  display: inline-block;
+  width: calc(100% - 160px);
+  top: 0;
+  border-bottom: 1px solid #e5e5e5;
+  /*margin: 0 0.5% 12px 0.5%;*/
+  height: 50px;
+  margin-left: 160px;
+  background-color: #fff;
+  z-index: 50;
+  opacity: 1;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+}
+/* line 20, element_navBar.scss */
+nav.navBar-tools > div {
+  background: #fff;
+  /*@extend .boxShadowGlobal;*/
+  padding: 3px 0 7px 0px;
+  height: 49px;
+  float: right;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  border-left: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+/* line 30, element_navBar.scss */
+nav.navBar-tools > div span {
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 43, element_navBar.scss */
+nav.navBar-tools > div:hover span, nav.navBar-tools > div:hover i, nav.navBar-tools > div:focus span, nav.navBar-tools > div:focus i {
+  color: #3F51B5 !important;
+  opacity: 1;
+}
+/* line 50, element_navBar.scss */
+nav.navBar-tools .navBar--search {
+  overflow: hidden;
+  padding: 4px 0 6px 9px;
+  cursor: text;
+}
+/* line 54, element_navBar.scss */
+nav.navBar-tools .navBar--search label {
+  margin-bottom: 0;
+}
+/* line 56, element_navBar.scss */
+nav.navBar-tools .navBar--search label i.fa {
+  cursor: text;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1.6rem;
+  padding: 10px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 64, element_navBar.scss */
+nav.navBar-tools .navBar--search label input {
+  width: 0px;
+  opacity: 0;
+  padding: 8px 5px 12px 0;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: #3F51B5;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  outline: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+}
+/* line 75, element_navBar.scss */
+nav.navBar-tools .navBar--search label input::-webkit-input-placeholder {
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 80, element_navBar.scss */
+nav.navBar-tools .navBar--search label input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 85, element_navBar.scss */
+nav.navBar-tools .navBar--search label input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 90, element_navBar.scss */
+nav.navBar-tools .navBar--search label input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 98, element_navBar.scss */
+nav.navBar-tools .navBar--search:hover label i, nav.navBar-tools .navBar--search:focus,
+nav.navBar-tools .navBar--search input:focus * {
+  color: #3F51B5;
+}
+/* line 103, element_navBar.scss */
+nav.navBar-tools .navBar--search:hover label input,
+nav.navBar-tools .navBar--search input:focus {
+  width: 100px;
+  opacity: 1;
+}
+/* line 112, element_navBar.scss */
+nav.navBar-tools .navBar--addProject {
+  float: right;
+  width: 50px;
+  padding: 0;
+}
+/* line 116, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa, nav.navBar-tools .navBar--addProject span {
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* line 120, element_navBar.scss */
+nav.navBar-tools .navBar--addProject:hover i.fa:after {
+  opacity: 1;
+  top: 100px;
+}
+/* line 124, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  cursor: pointer;
+  float: left;
+}
+/* line 129, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa:before {
+  display: block;
+  position: relative;
+  content: "\f067";
+  margin-top: 0px;
+  padding: 16px 18px 15px 18px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 138, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa:after {
+  content: 'Add a project';
+  display: block;
+  position: absolute;
+  padding: 15px 13px;
+  width: 154px;
+  height: 50px;
+  /*opacity: 1;
+  top: 100px;*/
+  opacity: 0;
+  top: -60px;
+  right: -51px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #3F51B5;
+  background-color: #FFF;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: -1;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+}
+
+/* line 164, element_navBar.scss */
+nav.navBar-tools.hideNav {
+  opacity: 0;
+  -webkit-transform: translateY(-60px);
+  -moz-transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+}
+
+/* ------------------------- */
+/* line 13, main.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 12, main.scss */
+/* line 14, main.scss */
 body {
   padding: 0;
   margin: 0;
@@ -9824,14 +9894,14 @@ body {
   transition: background 0.2s ease-out;
 }
 
-/* line 23, main.scss */
+/* line 25, main.scss */
 body > header {
   height: 50px;
   position: fixed;
   z-index: 100;
   background-color: rgba(238, 238, 238, 0.5);
 }
-/* line 28, main.scss */
+/* line 30, main.scss */
 body > header .header-links {
   display: block;
   height: 100%;
@@ -9839,7 +9909,7 @@ body > header .header-links {
   float: left;
   text-decoration: none;
 }
-/* line 36, main.scss */
+/* line 38, main.scss */
 body > header .header-links:hover .header--logo img {
   -webkit-transform: translateY(-200%);
   -moz-transform: translateY(-200%);
@@ -9848,7 +9918,7 @@ body > header .header-links:hover .header--logo img {
   transform: translateY(-200%);
   opacity: 0;
 }
-/* line 40, main.scss */
+/* line 42, main.scss */
 body > header .header-links:hover .header--logo .fa-home {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -9857,7 +9927,7 @@ body > header .header-links:hover .header--logo .fa-home {
   transform: translateY(-50%);
   opacity: 1;
 }
-/* line 46, main.scss */
+/* line 48, main.scss */
 body > header .header-links .header--logo {
   width: 50px;
   background: #3F51B5;
@@ -9865,7 +9935,7 @@ body > header .header-links .header--logo {
   display: block;
   float: left;
 }
-/* line 52, main.scss */
+/* line 54, main.scss */
 body > header .header-links .header--logo img {
   width: 35px;
   margin: auto;
@@ -9879,7 +9949,7 @@ body > header .header-links .header--logo img {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 63, main.scss */
+/* line 65, main.scss */
 body > header .header-links .header--logo .fa-home {
   color: white;
   font-size: 2.4rem;
@@ -9899,7 +9969,7 @@ body > header .header-links .header--logo .fa-home {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 77, main.scss */
+/* line 79, main.scss */
 body > header .header-links h1 {
   display: inline-block;
   font-size: 2.4rem;
@@ -9912,18 +9982,18 @@ body > header .header-links h1 {
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 92, main.scss */
+/* line 94, main.scss */
 body > header .breadcrumb_project {
   float: left;
   background-color: rgba(63, 81, 181, 0.8);
   color: white;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 2.4rem;
   line-height: 50px;
   vertical-align: middle;
 }
 
-/* line 107, main.scss */
+/* line 109, main.scss */
 .dashboard,
 .projects {
   position: absolute;
@@ -9938,17 +10008,17 @@ body > header .breadcrumb_project {
   transition-duration: 0.5s;
 }
 
-/* line 122, main.scss */
+/* line 124, main.scss */
 .dashboard {
   margin: calc(50px + 0.5%) auto auto auto;
 }
 
-/* line 125, main.scss */
+/* line 127, main.scss */
 .dashboard.modify {
   opacity: 0;
 }
 
-/* line 128, main.scss */
+/* line 130, main.scss */
 .dashboard--project.transi {
   opacity: 0;
   -webkit-transform: translateY(20px);
@@ -9958,7 +10028,7 @@ body > header .breadcrumb_project {
   transform: translateY(20px);
 }
 
-/* line 135, main.scss */
+/* line 137, main.scss */
 .projects {
   margin: 50px auto auto auto;
   opacity: 0;
@@ -9967,20 +10037,20 @@ body > header .breadcrumb_project {
   transition: opacity 0.2s ease-out;
 }
 
-/* line 140, main.scss */
+/* line 142, main.scss */
 .projects.open {
   opacity: 1;
   -webkit-animation: fadeIn 0.2s ease-out 0.2s backwards;
   -moz-animation: fadeIn 0.2s ease-out 0.2s backwards;
   animation: fadeIn 0.2s ease-out 0.2s backwards;
 }
-/* line 144, main.scss */
+/* line 146, main.scss */
 .projects.open .project header {
   -webkit-animation: fadeIn 0.2s ease-out 0.2s backwards;
   -moz-animation: fadeIn 0.2s ease-out 0.2s backwards;
   animation: fadeIn 0.2s ease-out 0.2s backwards;
 }
-/* line 148, main.scss */
+/* line 150, main.scss */
 .projects.open .project .project-date,
 .projects.open .project .project-links,
 .projects.open .project main,
@@ -9989,32 +10059,32 @@ body > header .breadcrumb_project {
   -moz-animation: moveUp 0.4s ease-out 0.2s backwards;
   animation: moveUp 0.4s ease-out 0.2s backwards;
 }
-/* line 155, main.scss */
+/* line 157, main.scss */
 .projects.open .project .project-date {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-/* line 156, main.scss */
+/* line 158, main.scss */
 .projects.open .project .project-links {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-/* line 157, main.scss */
+/* line 159, main.scss */
 .projects.open .project main {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-/* line 158, main.scss */
+/* line 160, main.scss */
 .projects.open .project footer {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
-/* line 161, main.scss */
+/* line 163, main.scss */
 .projects .hide {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

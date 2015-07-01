@@ -55,7 +55,6 @@ $(document).ready(function(){
 
 
 	   function dashboardEvents(){
-	   	$('body').css({'background':'#eee'});
 
 		   // Dashboard Content Hover
 		   var clicked = false;

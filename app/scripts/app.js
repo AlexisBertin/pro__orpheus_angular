@@ -23,9 +23,13 @@ var app = angular.module('orpheusHtmlTemplatesApp', [
         templateUrl:'views/main.html',
         controller: 'mainCtrl'
       })
-      .when('/:project',{
+      .when('/project/:project',{
         templateUrl:'views/project.html',
         controller: 'projectCtrl'
+      })
+      .when('/addProject',{
+        templateUrl:'views/addProject.html',
+        controller: 'addProjectCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -33,3 +37,20 @@ var app = angular.module('orpheusHtmlTemplatesApp', [
 
   });
 
+
+  app.directive('navTools',function(){
+    return {
+      restrict: 'A',
+      templateUrl: 'views/_navTools.html',
+      controller: 'mainCtrl'
+      // controller: function($scope, $http){
+      //   $http.get('views/_menuOverlayData.json')
+      //     .success(function(data){
+      //       $scope.menuOverlay = data;
+      //     })
+      //     .error(function(data){
+      //       console.log('Error - $http.get(views/_menuOverlayData.json) - '+ data);
+      //     });
+      // }
+    };
+  });

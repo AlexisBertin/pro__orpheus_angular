@@ -30,6 +30,7 @@ app.controller('projectCtrl', function ($scope, $http, $routeParams) {
    	setTimeout(function(){
    		$('#'+project).removeClass('hide');
    		$(".projects").addClass('open');
+         $(".navBar-tools").addClass('hideNav');
 
    		$('a').click(function(e){
    			e.preventDefault();

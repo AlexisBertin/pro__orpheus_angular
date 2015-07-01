@@ -7,6 +7,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "_reset.scss";
 @import "main_dashboard.scss";
 @import "main_project.scss";
+@import "main_addProject.scss";
+@import "element_navBar.scss";
 
 html { font-size: 62.5%; }
 body {

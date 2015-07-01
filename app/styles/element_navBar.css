@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'calluna';
+  src: url("fonts/Calluna/Calluna-Regular.otf");
+}
+/* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
+/* --- Dashboard z-index --- */
+/* ------------------------- */
+/* line 22, _variables.scss */
+.verticalAlign {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 27, _variables.scss */
+.boxShadowGlobal {
+  -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Nav - Tools bar ---- */
+/* line 6, element_navBar.scss */
+nav.navBar-tools {
+  position: fixed;
+  display: inline-block;
+  width: calc(100% - 160px);
+  top: 0;
+  border-bottom: 1px solid #e5e5e5;
+  /*margin: 0 0.5% 12px 0.5%;*/
+  height: 50px;
+  margin-left: 160px;
+  background-color: #fff;
+  z-index: 50;
+  opacity: 1;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+}
+/* line 20, element_navBar.scss */
+nav.navBar-tools > div {
+  background: #fff;
+  /*@extend .boxShadowGlobal;*/
+  padding: 3px 0 7px 0px;
+  height: 49px;
+  float: right;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  border-left: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+/* line 30, element_navBar.scss */
+nav.navBar-tools > div span {
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 43, element_navBar.scss */
+nav.navBar-tools > div:hover span, nav.navBar-tools > div:hover i, nav.navBar-tools > div:focus span, nav.navBar-tools > div:focus i {
+  color: #3F51B5 !important;
+  opacity: 1;
+}
+/* line 50, element_navBar.scss */
+nav.navBar-tools .navBar--search {
+  overflow: hidden;
+  padding: 4px 0 6px 9px;
+  cursor: text;
+}
+/* line 54, element_navBar.scss */
+nav.navBar-tools .navBar--search label {
+  margin-bottom: 0;
+}
+/* line 56, element_navBar.scss */
+nav.navBar-tools .navBar--search label i.fa {
+  cursor: text;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1.6rem;
+  padding: 10px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 64, element_navBar.scss */
+nav.navBar-tools .navBar--search label input {
+  width: 0px;
+  opacity: 0;
+  padding: 8px 5px 12px 0;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: #3F51B5;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  outline: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+}
+/* line 75, element_navBar.scss */
+nav.navBar-tools .navBar--search label input::-webkit-input-placeholder {
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 80, element_navBar.scss */
+nav.navBar-tools .navBar--search label input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 85, element_navBar.scss */
+nav.navBar-tools .navBar--search label input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 90, element_navBar.scss */
+nav.navBar-tools .navBar--search label input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: rgba(63, 81, 181, 0.6);
+  font-weight: 100;
+  margin-top: -2px;
+}
+/* line 98, element_navBar.scss */
+nav.navBar-tools .navBar--search:hover label i, nav.navBar-tools .navBar--search:focus,
+nav.navBar-tools .navBar--search input:focus * {
+  color: #3F51B5;
+}
+/* line 103, element_navBar.scss */
+nav.navBar-tools .navBar--search:hover label input,
+nav.navBar-tools .navBar--search input:focus {
+  width: 100px;
+  opacity: 1;
+}
+/* line 112, element_navBar.scss */
+nav.navBar-tools .navBar--addProject {
+  float: right;
+  width: 50px;
+  padding: 0;
+}
+/* line 116, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa, nav.navBar-tools .navBar--addProject span {
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* line 120, element_navBar.scss */
+nav.navBar-tools .navBar--addProject:hover i.fa:after {
+  opacity: 1;
+  top: 100px;
+}
+/* line 124, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  cursor: pointer;
+  float: left;
+}
+/* line 129, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa:before {
+  display: block;
+  position: relative;
+  content: "\f067";
+  margin-top: 0px;
+  padding: 16px 18px 15px 18px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 138, element_navBar.scss */
+nav.navBar-tools .navBar--addProject i.fa:after {
+  content: 'Add a project';
+  display: block;
+  position: absolute;
+  padding: 15px 13px;
+  width: 154px;
+  height: 50px;
+  /*opacity: 1;
+  top: 100px;*/
+  opacity: 0;
+  top: -60px;
+  right: -51px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #3F51B5;
+  background-color: #FFF;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: -1;
+  -webkit-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+  transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
+}
+
+/* line 164, element_navBar.scss */
+nav.navBar-tools.hideNav {
+  opacity: 0;
+  -webkit-transform: translateY(-60px);
+  -moz-transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+}
+
+/* ------------------------- */
+
+/*# sourceMappingURL=element_navBar.css.map */

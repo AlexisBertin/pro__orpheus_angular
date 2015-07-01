@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'calluna';
+  src: url("fonts/Calluna/Calluna-Regular.otf");
+}
+/* rgba(63,81,181,1); */
+/*$font-serif: 'Playfair Display', Georgia, serif;*/
+/* --- Dashboard z-index --- */
+/* ------------------------- */
+/* line 22, _variables.scss */
+.verticalAlign {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 27, _variables.scss */
+.boxShadowGlobal {
+  -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ------ Dashboard Overlay ------ */
+/* line 5, main_addProject.scss */
+.addProject {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  background: #3F51B5;
+}
+/* line 13, main_addProject.scss */
+.addProject .addProject-newProject {
+  position: relative;
+  width: calc(100% - 100px);
+  height: calc(100% - 50px);
+  margin: 50px auto 0 auto;
+}
+/* line 19, main_addProject.scss */
+.addProject .addProject-newProject h2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 19rem;
+  height: 89rem;
+  line-height: 1.2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 30, main_addProject.scss */
+.addProject .addProject-newProject form {
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 600px;
+  overflow: hidden;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* line 43, main_addProject.scss */
+.addProject .addProject-newProject form .input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+  padding-top: 1em;
+}
+/* line 52, main_addProject.scss */
+.addProject .addProject-newProject form .input__field {
+  position: relative;
+  display: block;
+  float: right;
+  border: none;
+  border-radius: 0;
+  font-family: Georgia, serif;
+  -webkit-appearance: none;
+  padding: 0.5em 0em 0.25em;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+}
+/* line 67, main_addProject.scss */
+.addProject .addProject-newProject form .input__field:focus {
+  outline: none;
+}
+/* line 71, main_addProject.scss */
+.addProject .addProject-newProject form .input__label {
+  float: right;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: -5px;
+  font-size: 2rem;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0em;
+  pointer-events: none;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 0.3s 0.1s, color 1s;
+  transition: transform 0.3s 0.1s, color 1s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+/* line 100, main_addProject.scss */
+.addProject .addProject-newProject form .input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+/* line 107, main_addProject.scss */
+.addProject .addProject-newProject form .graphic {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  fill: none;
+  stroke: white;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+  transition: transform 0.7s, stroke 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+/* line 120, main_addProject.scss */
+.addProject .addProject-newProject form .icon {
+  color: #ddd;
+  font-size: 150%;
+}
+/* line 126, main_addProject.scss */
+.addProject .addProject-newProject form .input__field:focus + .input__label,
+.addProject .addProject-newProject form .input--filled .input__label {
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
+  transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
+}
+/* line 133, main_addProject.scss */
+.addProject .addProject-newProject form .input__field:focus ~ .graphic,
+.addProject .addProject-newProject form .input--filled .graphic {
+  stroke: rgba(255, 255, 255, 0.6);
+  -webkit-transform: translate3d(-66.6%, 0, 0);
+  transform: translate3d(-66.6%, 0, 0);
+}
+
+/* ------------------------------- */
+
+/*# sourceMappingURL=main_addProject.css.map */
