@@ -6,11 +6,18 @@
 @import "bourbon/bourbon";
 
 $blue: #3F51B5; /* rgba(63,81,181,1); */
-$font-sansserif: 'Open Sans', sans-serif;
+$font-sansserif: 'Montserrat', sans-serif;
 // $font-serif: 'Lora', serif;
-$font-serif: Georgia, serif;
-
+$font-serif: 'Playfair Display', Georgia, serif;
 $greyBorder: #e5e5e5;
+
+/* --- Dashboard z-index --- */
+$zIndex-header: 100;
+$zIndex-navBar: 50;
+$zIndex-projects: 10;
+$zIndex-overlay: 20;
+/* ------------------------- */
+
 
 .verticalAlign {
 	position: relative;

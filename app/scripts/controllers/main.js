@@ -66,6 +66,10 @@ app.controller('mainCtrl', function ($scope, $http) {
 
 
 
+
+
+
+
    function init(){
 		$(".projects").removeClass('open');
 	  	$('.dashboard').removeClass('modify');
@@ -91,16 +95,6 @@ app.controller('mainCtrl', function ($scope, $http) {
 		},50);
    }
 
-
-
-   // function openProject(project){
-   // 	$('.dashboard').addClass('modify');
-   // 	setTimeout(function(){
-   // 		$(project).removeClass('hide');
-   // 		$(".projects").addClass('open');
-   // 	},100);
-   // }
-
    function resetDashboard(){
    	$('.dashboard--project').removeAttr('style');
    	$('.dashboard--projectClicked footer').removeAttr('style');
@@ -121,12 +115,8 @@ app.controller('mainCtrl', function ($scope, $http) {
    	},100);
    }
 
-
-
-
    function dashboardEvents(){
    	// $('body').css({'background':'#eee'});
-
 	   // Dashboard Content Click
 	   $scope.projectClick = function(project){
 	   	clicked = true;

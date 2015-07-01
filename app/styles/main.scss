@@ -23,7 +23,7 @@ body {
 body > header {
   height: 50px;
   position: fixed;
-  z-index: 1000;
+  z-index: $zIndex-header;
   background-color: rgba(238, 238, 238, 0.5);
   .header-links {
     display: block;

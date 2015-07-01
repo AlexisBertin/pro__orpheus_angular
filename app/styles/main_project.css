@@ -3,7 +3,9 @@
   src: url("fonts/Calluna/Calluna-Regular.otf");
 }
 /* rgba(63,81,181,1); */
-/* line 15, _variables.scss */
+/* --- Dashboard z-index --- */
+/* ------------------------- */
+/* line 22, _variables.scss */
 .verticalAlign {
   position: relative;
   top: 50%;
@@ -14,7 +16,7 @@
   transform: translateY(-50%);
 }
 
-/* line 20, _variables.scss */
+/* line 27, _variables.scss */
 .boxShadowGlobal {
   -webkit-box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
   box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
@@ -75,7 +77,7 @@
 .project header .project--projectTitle h1 {
   font-size: 12rem;
   line-height: 1.3;
-  font-family: Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   color: black;
   margin-bottom: 0.8rem;
   -webkit-transition: font-size 0.2s ease-out;
@@ -169,7 +171,7 @@
   padding-top: 80px;
   padding-bottom: 15px;
   color: rgba(0, 0, 0, 0.8);
-  font-family: Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 5rem;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   letter-spacing: 0px;
@@ -192,7 +194,7 @@
   font-size: 1.8rem;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
-  font-family: Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
@@ -209,7 +211,7 @@
   text-decoration: none;
   color: rgba(0, 0, 0, 0.4);
   position: relative;
-  font-family: Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
 }
 /* line 139, main_project.scss */
 .project main ul.contentToc li a:hover {
@@ -232,7 +234,7 @@
   font-weight: 700;
   margin-right: 5px;
   color: #3F51B5;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 /* line 160, main_project.scss */
 .project main ul.contentTocChildren li a {
