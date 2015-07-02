@@ -68,7 +68,7 @@
   width: 90%;
   vertical-align: top;
   overflow: hidden;
-  padding-top: 1em;
+  padding-top: 2em;
   margin: 0 auto 80px auto;
 }
 /* line 49, main_addProject.scss */
@@ -80,9 +80,9 @@
   border-radius: 0;
   font-family: Georgia, serif;
   -webkit-appearance: none;
-  padding: 0.5em 0em 0.25em;
+  padding: 20px 15px 25px 15px;
   width: 100%;
-  background: transparent;
+  background: rgba(18, 17, 17, 0.1);
   color: #fff;
   font-size: 2rem;
 }
@@ -93,7 +93,7 @@
 /* line 68, main_addProject.scss */
 .addProject .addProject-content form .input__label {
   float: right;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
@@ -103,9 +103,9 @@
   -ms-user-select: none;
   user-select: none;
   position: absolute;
-  top: -5px;
+  top: 18px;
   font-size: 2rem;
-  left: 0;
+  left: 15px;
   display: block;
   width: 100%;
   text-align: left;
@@ -131,29 +131,30 @@
   top: 3px;
   left: 0;
   fill: none;
-  stroke: white;
+  stroke-width: 4px;
+  stroke: #2f3e8f;
   pointer-events: none;
   -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
   transition: transform 0.7s, stroke 0.7s;
   -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
 }
-/* line 117, main_addProject.scss */
+/* line 118, main_addProject.scss */
 .addProject .addProject-content form .icon {
   color: #ddd;
   font-size: 150%;
 }
-/* line 123, main_addProject.scss */
+/* line 124, main_addProject.scss */
 .addProject .addProject-content form .input__field:focus + .input__label,
 .addProject .addProject-content form .input--filled .input__label {
-  color: rgba(255, 255, 255, 0.2);
-  -webkit-transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
-  transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
+  color: white;
+  -webkit-transform: translate3d(0, -1.8em, 0) scale3d(0.75, 0.75, 1);
+  transform: translate3d(0, -1.8em, 0) scale3d(0.75, 0.75, 1);
 }
-/* line 130, main_addProject.scss */
+/* line 131, main_addProject.scss */
 .addProject .addProject-content form .input__field:focus ~ .graphic,
 .addProject .addProject-content form .input--filled .graphic {
-  stroke: rgba(255, 255, 255, 0.2);
+  stroke: white;
   -webkit-transform: translate3d(-66.6%, 0, 0);
   transform: translate3d(-66.6%, 0, 0);
 }
@@ -170,7 +171,7 @@
    margin: auto;
    color: #fff;
  }*/
-/* line 173, main_addProject.scss */
+/* line 174, main_addProject.scss */
 .addProject-background {
   z-index: 1;
   color: #fff;
@@ -182,18 +183,18 @@
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 182, main_addProject.scss */
+/* line 183, main_addProject.scss */
 .addProject-background header {
   margin-bottom: 4.8rem;
 }
-/* line 184, main_addProject.scss */
+/* line 185, main_addProject.scss */
 .addProject-background header .project--backDash {
   position: absolute;
   display: block;
   left: 35px;
   top: 30px;
 }
-/* line 190, main_addProject.scss */
+/* line 191, main_addProject.scss */
 .addProject-background header .project--edit {
   position: absolute;
   top: 35px;
@@ -207,23 +208,23 @@
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 200, main_addProject.scss */
+/* line 201, main_addProject.scss */
 .addProject-background header .project--edit:hover {
   opacity: 1;
 }
-/* line 204, main_addProject.scss */
+/* line 205, main_addProject.scss */
 .addProject-background header .project--projectTitle {
   text-align: center;
   display: block;
   margin-top: 6rem;
 }
-/* line 208, main_addProject.scss */
+/* line 209, main_addProject.scss */
 .addProject-background header .project--projectTitle, .addProject-background header .project--projectTitle h2, .addProject-background header .project--projectTitle hr, .addProject-background header .project--projectTitle h3 {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 211, main_addProject.scss */
+/* line 212, main_addProject.scss */
 .addProject-background header .project--projectTitle h1 {
   font-size: 12rem;
   line-height: 1.3;
@@ -234,39 +235,39 @@
   -moz-transition: font-size 0.2s ease-out;
   transition: font-size 0.2s ease-out;
 }
-/* line 219, main_addProject.scss */
+/* line 220, main_addProject.scss */
 .addProject-background header .project--projectTitle h3 {
   color: rgba(255, 255, 255, 0.4);
   padding-top: 0px;
 }
-/* line 226, main_addProject.scss */
+/* line 227, main_addProject.scss */
 .addProject-background ul.project-date li,
 .addProject-background ul.project-links li {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.4);
   line-height: 2.4rem;
 }
-/* line 231, main_addProject.scss */
+/* line 232, main_addProject.scss */
 .addProject-background ul.project-date li span,
 .addProject-background ul.project-links li span {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 236, main_addProject.scss */
+/* line 237, main_addProject.scss */
 .addProject-background ul.project-date {
   float: left;
   display: block;
 }
-/* line 239, main_addProject.scss */
+/* line 240, main_addProject.scss */
 .addProject-background ul.project-date li {
   text-align: left;
 }
-/* line 241, main_addProject.scss */
+/* line 242, main_addProject.scss */
 .addProject-background ul.project-date li .project--projectDevelopment {
   font-weight: bold;
   color: #fff;
   font-size: 1.1rem;
 }
-/* line 245, main_addProject.scss */
+/* line 246, main_addProject.scss */
 .addProject-background ul.project-date li .project--projectDevelopment:after {
   content: "In development";
   display: inline-block;
@@ -281,16 +282,16 @@
   /*opacity: 0;
   @include transform(translateY(-10px));*/
 }
-/* line 260, main_addProject.scss */
+/* line 261, main_addProject.scss */
 .addProject-background ul.project-links {
   float: right;
   display: block;
 }
-/* line 263, main_addProject.scss */
+/* line 264, main_addProject.scss */
 .addProject-background ul.project-links li {
   text-align: right;
 }
-/* line 268, main_addProject.scss */
+/* line 269, main_addProject.scss */
 .addProject-background main {
   float: none;
   clear: both;
@@ -314,7 +315,7 @@
       }
     }*/
 }
-/* line 272, main_addProject.scss */
+/* line 273, main_addProject.scss */
 .addProject-background main h2 {
   margin-top: 110px;
   margin-bottom: 15px;
@@ -329,15 +330,15 @@
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 283, main_addProject.scss */
+/* line 284, main_addProject.scss */
 .addProject-background main h2:first-child {
   margin-top: 250px;
 }
-/* line 285, main_addProject.scss */
+/* line 286, main_addProject.scss */
 .addProject-background main div.content {
   margin: 0 auto 2.4rem auto;
 }
-/* line 287, main_addProject.scss */
+/* line 288, main_addProject.scss */
 .addProject-background main div.content p {
   display: block;
   font-size: 1.8rem;
@@ -348,11 +349,11 @@
   -moz-column-count: 2;
   column-count: 2;
 }
-/* line 297, main_addProject.scss */
+/* line 298, main_addProject.scss */
 .addProject-background main ul.contentToc {
   margin-top: 30px;
 }
-/* line 300, main_addProject.scss */
+/* line 301, main_addProject.scss */
 .addProject-background main ul.contentToc li a {
   font-size: 1.8rem;
   display: block;
@@ -368,13 +369,13 @@
      }
    }*/
 }
-/* line 315, main_addProject.scss */
+/* line 316, main_addProject.scss */
 .addProject-background main ul.contentToc li a, .addProject-background main ul.contentToc li a span {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 317, main_addProject.scss */
+/* line 318, main_addProject.scss */
 .addProject-background main ul.contentToc li a span {
   display: inline-block;
   text-align: center;
@@ -383,11 +384,11 @@
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
-/* line 329, main_addProject.scss */
+/* line 330, main_addProject.scss */
 .addProject-background main ul.contentTocChildren li a {
   padding: 10px 5px 10px 40px;
 }
-/* line 330, main_addProject.scss */
+/* line 331, main_addProject.scss */
 .addProject-background main ul.contentTocChildren.nested li a {
   padding: 10px 5px 10px 80px;
 }
