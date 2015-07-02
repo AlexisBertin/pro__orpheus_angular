@@ -60,17 +60,23 @@
   </div>
   <div class="addProject-content">
     <form class="addProject--form">
+      <div class="addProject_control">
+        <button class="addProject_control-nextStep">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
       <span class="input input-1">
         <input class="input__field" type="text" id="input-1" ng-model="project.name" required />
         <label class="input__label" for="input-1">
-          <span class="input__label-content">Name</span>
+          <span class="input__label-content">Name of the project</span>
         </label>
         <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
           <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
         </svg>
       </span>
 
-      <span class="input input-2">
+      <span class="input input-2 hiddenUnvalid">
         <input class="input__field" type="text" id="input-2" ng-model="project.key" required />
         <label class="input__label" for="input-2">
           <span class="input__label-content">Key</span>
@@ -80,7 +86,7 @@
         </svg>
       </span>
 
-      <span class="input input-3">
+      <span class="input input-3 hiddenUnvalid">
         <input class="input__field" type="text" id="input-3" ng-model="project.inDev" required />
         <label class="input__label" for="input-3">
           <span class="input__label-content">In Development</span>
@@ -90,7 +96,7 @@
         </svg>
       </span>
 
-      <span class="input input-4">
+      <span class="input input-4 hiddenUnvalid">
         <input class="input__field" type="text" id="input-4" ng-model="project.introduction" required />
         <label class="input__label" for="input-4">
           <span class="input__label-content">Introduction</span>
@@ -100,7 +106,7 @@
         </svg>
       </span>
 
-      <span class="input input-5">
+      <span class="input input-5 hiddenUnvalid">
         <input class="input__field" type="text" id="input-5" ng-model="project.linkProd" required />
         <label class="input__label" for="input-5">
           <span class="input__label-content">Link Production Version</span>
@@ -110,7 +116,7 @@
         </svg>
       </span>
 
-      <span class="input input-6">
+      <span class="input input-6 hiddenUnvalid">
         <input class="input__field" type="text" id="input-6" ng-model="project.linkDev" required />
         <label class="input__label" for="input-6">
           <span class="input__label-content">Link Development Version</span>
@@ -120,7 +126,7 @@
         </svg>
       </span>
 
-      <span class="input input-7">
+      <span class="input input-7 hiddenUnvalid">
         <input class="input__field" type="text" id="input-7" ng-model="project.lead" required />
         <label class="input__label" for="input-7">
           <span class="input__label-content">Lead Developer</span>

@@ -13,11 +13,11 @@ app.controller('addProjectCtrl', function ($scope, $http, $routeParams) {
 		$(".addProject .addProject-background").addClass('open');
 		$(".addProject .addProject-content").addClass('open');
 		$(".navBar--addProject").addClass('open');
-		$(".addProject--form").mCustomScrollbar({
-			theme: 'light-thin',
-			mouseWheel:{ scrollAmount: 100 },
-			scrollInertia: 100
-		});
+		// $(".addProject--form").mCustomScrollbar({
+		// 	theme: 'light-thin',
+		// 	mouseWheel:{ scrollAmount: 100 },
+		// 	scrollInertia: 100
+		// });
 	},0);
 
 
