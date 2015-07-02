@@ -126,6 +126,9 @@
         font-size: 1.8rem;
         cursor: pointer;
         float: left;
+        @include transition(transform 0.2s ease-out);
+        @include transform-origin(center center);
+
         &:before {
           display: block;
           position: relative;
@@ -158,6 +161,30 @@
           @include transition(all 0.4s cubic-bezier(.39,.01,.2,.98));
         }
       }
+
+      &.open {
+        background: $blue;
+        height: 50px;
+        border-bottom: 1px solid $blue !important;
+        &:hover i.fa:before {
+          @include animation(buttonRotation 0.4s ease-out 0.2s backwards);
+        }
+        & i.fa {
+          color: #fff !important;
+          background-color: rgba(0,0,0,0) !important;
+          @include transform(rotate(45deg));
+
+          &:before {
+            background-color: rgba(0,0,0,0) !important;
+            border-bottom: 0;
+          }
+          &:after {
+            display: none;
+          }
+          /*@include transform(rotate(45deg));*/
+        }
+
+      }
     }
   }
 
@@ -166,3 +193,8 @@
     @include transform(translateY(-60px));
   }
 /* ------------------------- */
+
+@include keyframes(buttonRotation){
+  0% { @include transform(rotate(0deg)); }
+  100% { @include transform(rotate(360deg)); }
+}

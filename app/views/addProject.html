@@ -1,17 +1,136 @@
 <div class="addProject">
-    <div class="addProject-newProject">
-      <h2>Add a Project</h2>
-      <form>
-        <span class="input">
-          <input class="input__field" type="text" id="input-1" />
-          <label class="input__label" for="input-1">
-            <span class="input__label-content">Name</span>
-          </label>
-          <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-          </svg>
-        </span>
+  <div class="addProject-background">
+    <header>
+      <div class="project--projectTitle">
+        <h1>{{project.name}}</h1>
+        <h3>{{project.key}}</h3>
+      </div>
+    </header>
+    <ul class="project-date">
+      <li><i class="fa fa-clock-o"></i> Creation Date: <span>{{project.dateCreated}}</span></li>
+      <li><i class="fa fa-clock-o"></i> Last Update: <span>{{project.dateLastUpdate}}</span></li>
+      <li><i ng-if="project.inDev" class="fa fa-code project--projectDevelopment"></i></li>
+    </ul>
+    <ul class="project-links">
+      <li>
+        <a href="{{project.linkProd}}" target="_blank" title="Production Link">
+          <i class="fa fa-link"></i>
+          {{project.linkProd}}
+        </a>
+      </li>
+      <!-- <li ng-if="showLinkDev(project)">
+        <a href="project.linkDev" target="_blank" title="Development Link">
+          <i class="fa fa-link"></i>
+          {{project.linkDev}}
+        </a>
+      </li> -->
+    </ul>
 
-      </form>
-    </div>
+    <main>
+      <h2>Introduction</h2>
+      <div class="content" ng-bind-html="project.introduction">{{project.introduction}}</div>
+      <h2>Table of Content</h2>
+      <div class="project--tableOfContent">
+        <ul class="contentToc">
+          <li ng-repeat="tocPage in project.tableOfContent">
+            <a href="{{tocPage.link}}" target="_blank" title="{{tocPage.content}} link">
+              <span>{{tocPage.id}}</span>
+              {{tocPage.content}}
+            </a>
+            <ul ng-if="tocPage.children" class="contentTocChildren">
+              <li ng-repeat="tocPageChild in tocPage.children">
+                <a href="{{tocPageChild.link}}" title="{{tocPageChild.content}} link">
+                  <span>{{tocPageChild.id}}</span>
+                  {{tocPageChild.content}}
+                </a>
+                <ul ng-if="tocPageChild.children" class="contentTocChildren nested">
+                  <li ng-repeat="tocPageChildNested in tocPageChild.children">
+                    <a href="{{tocPageChildNested.link}}" title="{{tocPageChildNested.content}} link">
+                      <span>{{tocPageChildNested.id}}</span>
+                      {{tocPageChildNested.content}}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </main>
   </div>
+  <div class="addProject-content">
+    <form class="addProject--form">
+      <span class="input input-1">
+        <input class="input__field" type="text" id="input-1" ng-model="project.name" required />
+        <label class="input__label" for="input-1">
+          <span class="input__label-content">Name</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+
+      <span class="input input-2">
+        <input class="input__field" type="text" id="input-2" ng-model="project.key" required />
+        <label class="input__label" for="input-2">
+          <span class="input__label-content">Key</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+
+      <span class="input input-3">
+        <input class="input__field" type="text" id="input-3" ng-model="project.inDev" required />
+        <label class="input__label" for="input-3">
+          <span class="input__label-content">In Development</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+
+      <span class="input input-4">
+        <input class="input__field" type="text" id="input-4" ng-model="project.introduction" required />
+        <label class="input__label" for="input-4">
+          <span class="input__label-content">Introduction</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+
+      <span class="input input-5">
+        <input class="input__field" type="text" id="input-5" ng-model="project.linkProd" required />
+        <label class="input__label" for="input-5">
+          <span class="input__label-content">Link Production Version</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+
+      <span class="input input-6">
+        <input class="input__field" type="text" id="input-6" ng-model="project.linkDev" required />
+        <label class="input__label" for="input-6">
+          <span class="input__label-content">Link Development Version</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+
+      <span class="input input-7">
+        <input class="input__field" type="text" id="input-7" ng-model="project.lead" required />
+        <label class="input__label" for="input-7">
+          <span class="input__label-content">Lead Developer</span>
+        </label>
+        <svg class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+        </svg>
+      </span>
+    </form>
+
+
+  </div>
+</div>

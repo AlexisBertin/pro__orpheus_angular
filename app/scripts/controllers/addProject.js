@@ -7,7 +7,66 @@ app.controller('addProjectCtrl', function ($scope, $http, $routeParams) {
 	  'Karma'
 	];
 
-	$(".navBar-tools").removeClass('hideNav');
+	setTimeout(function(){
+		$(".navBar-tools").removeClass('hideNav');
+		$(".addProject").addClass('open');
+		$(".addProject .addProject-background").addClass('open');
+		$(".addProject .addProject-content").addClass('open');
+		$(".navBar--addProject").addClass('open');
+		$(".addProject--form").mCustomScrollbar({
+			theme: 'light-thin',
+			mouseWheel:{ scrollAmount: 100 },
+			scrollInertia: 100
+		});
+	},0);
+
+
+	$('.navBar--addProject').click(function(e){
+		if($(this).hasClass('open')){
+			e.preventDefault();
+			$(".navBar--addProject").removeClass('open');
+			$(".addProject").removeClass('open');
+			$(".addProject .addProject-background").removeClass('open');
+			$(".addProject .addProject-content").removeClass('open');
+			setTimeout(function(){
+				window.location = '#/';
+			},400);
+		}
+	});
+
+
+
+
+			// -------- Check inputs ----------- //
+			$('.input__field').focus(function(){
+				console.log('focus');
+				var thisId = $(this).attr('id');
+				if(document.getElementById(thisId).checkValidity() === false){
+					$('.'+thisId).removeClass('input--filled');
+				} else {
+					$('.'+thisId).addClass('input--filled');
+				}
+			});
+			$('.input__field').blur(function() {
+				console.log('blur');
+				var thisId = $(this).attr('id');
+				if(document.getElementById(thisId).checkValidity() === false){
+					$('.'+thisId).removeClass('input--filled');
+				} else {
+					$('.'+thisId).addClass('input--filled');
+				}
+			});
+
+
+
+
+
+
+
+
+
+
+
 	// var self = this;
 	// self.project = $routeParams.project;
 

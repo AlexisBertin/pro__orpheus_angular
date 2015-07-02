@@ -8,7 +8,6 @@ $(document).ready(function(){
 		    	console.log(project);
 		    	openProject(project);
 		   } else {
-		   	console.log('ok');
 		   	$(".projects").removeClass('open');
 		     	$('.dashboard').removeClass('modify');
 		     	resetDashboard();

@@ -7,6 +7,10 @@ app.controller('mainCtrl', function ($scope, $http) {
    	'Karma'
    ];
 
+
+   $(".navBar--addProject").removeClass('open');
+
+
    // Dashboard navbar search input
    var dashboardSearchIcon = $('.dashboard--search label i').css('color');
    $('.dashboard---searchInput').focus(function(){
@@ -98,6 +102,29 @@ app.controller('mainCtrl', function ($scope, $http) {
       	}
 		}
 
+
+
+
+	/* ------ Random link click transition ------ */
+		$('a').click(function(e){
+			e.preventDefault();
+			var eLink = $(this).attr('href');
+			var eLinkBlank = $(this).attr('target');
+			$('.projects').removeClass('open');
+
+			$(".navBar--addProject").removeClass('open');
+			$(".addProject").removeClass('open');
+			$(".addProject .addProject-background").removeClass('open');
+			$(".addProject .addProject-content").removeClass('open');
+			setTimeout(function(){
+				if(eLinkBlank == '_blank'){
+					window.open(eLink);
+				} else {
+					window.location = eLink;
+				}
+			},400);
+		});
+	/* ------------------------------------------ */
 
 
 

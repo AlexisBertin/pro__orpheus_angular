@@ -9519,56 +9519,53 @@ footer .project--backDash i.fa {
 /* ------ Dashboard Overlay ------ */
 /* line 5, main_addProject.scss */
 .addProject {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 20;
   background: #3F51B5;
 }
-/* line 13, main_addProject.scss */
-.addProject .addProject-newProject {
-  position: relative;
-  width: calc(100% - 100px);
-  height: calc(100% - 50px);
+/* line 8, main_addProject.scss */
+.addProject,
+.addProject .addProject-background,
+.addProject .addProject-content {
+  position: absolute;
+  width: 100%;
+  min-height: calc(100% - 50px);
+  height: auto;
   margin: 50px auto 0 auto;
-}
-/* line 19, main_addProject.scss */
-.addProject .addProject-newProject h2 {
-  font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.1);
-  font-size: 19rem;
-  height: 89rem;
-  line-height: 1.2;
-  position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
+  left: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
-/* line 30, main_addProject.scss */
-.addProject .addProject-newProject form {
-  position: absolute;
+/* line 23, main_addProject.scss */
+.addProject .addProject-content {
+  z-index: 2;
+  background: rgba(63, 81, 181, 0.9);
+}
+/* line 27, main_addProject.scss */
+.addProject .addProject-content form {
+  position: fixed;
   display: block;
-  width: 60%;
-  height: 600px;
-  overflow: hidden;
+  width: 70%;
+  height: 90%;
   margin: auto;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  overflow-x: hidden;
 }
-/* line 43, main_addProject.scss */
-.addProject .addProject-newProject form .input {
+/* line 39, main_addProject.scss */
+.addProject .addProject-content form .input {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 90%;
   vertical-align: top;
   overflow: hidden;
   padding-top: 1em;
+  margin: 0 auto 80px auto;
 }
-/* line 52, main_addProject.scss */
-.addProject .addProject-newProject form .input__field {
+/* line 49, main_addProject.scss */
+.addProject .addProject-content form .input__field {
   position: relative;
   display: block;
   float: right;
@@ -9582,12 +9579,12 @@ footer .project--backDash i.fa {
   color: #fff;
   font-size: 2rem;
 }
-/* line 67, main_addProject.scss */
-.addProject .addProject-newProject form .input__field:focus {
+/* line 64, main_addProject.scss */
+.addProject .addProject-content form .input__field:focus {
   outline: none;
 }
-/* line 71, main_addProject.scss */
-.addProject .addProject-newProject form .input__label {
+/* line 68, main_addProject.scss */
+.addProject .addProject-content form .input__label {
   float: right;
   color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -9614,15 +9611,15 @@ footer .project--backDash i.fa {
   -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
 }
-/* line 100, main_addProject.scss */
-.addProject .addProject-newProject form .input__label-content {
+/* line 97, main_addProject.scss */
+.addProject .addProject-content form .input__label-content {
   position: relative;
   display: block;
   padding: 1.6em 0;
   width: 100%;
 }
-/* line 107, main_addProject.scss */
-.addProject .addProject-newProject form .graphic {
+/* line 104, main_addProject.scss */
+.addProject .addProject-content form .graphic {
   position: absolute;
   top: 3px;
   left: 0;
@@ -9634,27 +9631,260 @@ footer .project--backDash i.fa {
   -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
 }
-/* line 120, main_addProject.scss */
-.addProject .addProject-newProject form .icon {
+/* line 117, main_addProject.scss */
+.addProject .addProject-content form .icon {
   color: #ddd;
   font-size: 150%;
 }
-/* line 126, main_addProject.scss */
-.addProject .addProject-newProject form .input__field:focus + .input__label,
-.addProject .addProject-newProject form .input--filled .input__label {
-  color: rgba(255, 255, 255, 0.6);
+/* line 123, main_addProject.scss */
+.addProject .addProject-content form .input__field:focus + .input__label,
+.addProject .addProject-content form .input--filled .input__label {
+  color: rgba(255, 255, 255, 0.2);
   -webkit-transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
   transform: translate3d(0, -0.6em, 0) scale3d(0.75, 0.75, 1);
 }
-/* line 133, main_addProject.scss */
-.addProject .addProject-newProject form .input__field:focus ~ .graphic,
-.addProject .addProject-newProject form .input--filled .graphic {
-  stroke: rgba(255, 255, 255, 0.6);
+/* line 130, main_addProject.scss */
+.addProject .addProject-content form .input__field:focus ~ .graphic,
+.addProject .addProject-content form .input--filled .graphic {
+  stroke: rgba(255, 255, 255, 0.2);
   -webkit-transform: translate3d(-66.6%, 0, 0);
   transform: translate3d(-66.6%, 0, 0);
 }
 
 /* ------------------------------- */
+/*h2 {
+   font-family: $font-sansserif;
+   font-size: 19rem;
+   height: 89rem;
+   line-height: 1.2;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   color: #fff;
+ }*/
+/* line 173, main_addProject.scss */
+.addProject-background {
+  z-index: 1;
+  color: #fff;
+  position: relative !important;
+  margin: 0 auto 150px auto !important;
+  padding: 20px;
+  width: 70% !important;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 182, main_addProject.scss */
+.addProject-background header {
+  margin-bottom: 4.8rem;
+}
+/* line 184, main_addProject.scss */
+.addProject-background header .project--backDash {
+  position: absolute;
+  display: block;
+  left: 35px;
+  top: 30px;
+}
+/* line 190, main_addProject.scss */
+.addProject-background header .project--edit {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  display: block;
+  font-size: 2rem;
+  padding: 5px;
+  color: #fff;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 200, main_addProject.scss */
+.addProject-background header .project--edit:hover {
+  opacity: 1;
+}
+/* line 204, main_addProject.scss */
+.addProject-background header .project--projectTitle {
+  text-align: center;
+  display: block;
+  margin-top: 6rem;
+}
+/* line 208, main_addProject.scss */
+.addProject-background header .project--projectTitle, .addProject-background header .project--projectTitle h2, .addProject-background header .project--projectTitle hr, .addProject-background header .project--projectTitle h3 {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 211, main_addProject.scss */
+.addProject-background header .project--projectTitle h1 {
+  font-size: 12rem;
+  line-height: 1.3;
+  font-family: Georgia, serif;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  -webkit-transition: font-size 0.2s ease-out;
+  -moz-transition: font-size 0.2s ease-out;
+  transition: font-size 0.2s ease-out;
+}
+/* line 219, main_addProject.scss */
+.addProject-background header .project--projectTitle h3 {
+  color: rgba(255, 255, 255, 0.4);
+  padding-top: 0px;
+}
+/* line 226, main_addProject.scss */
+.addProject-background ul.project-date li,
+.addProject-background ul.project-links li {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 2.4rem;
+}
+/* line 231, main_addProject.scss */
+.addProject-background ul.project-date li span,
+.addProject-background ul.project-links li span {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 236, main_addProject.scss */
+.addProject-background ul.project-date {
+  float: left;
+  display: block;
+}
+/* line 239, main_addProject.scss */
+.addProject-background ul.project-date li {
+  text-align: left;
+}
+/* line 241, main_addProject.scss */
+.addProject-background ul.project-date li .project--projectDevelopment {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1rem;
+}
+/* line 245, main_addProject.scss */
+.addProject-background ul.project-date li .project--projectDevelopment:after {
+  content: "In development";
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  /*opacity: 0;
+  @include transform(translateY(-10px));*/
+}
+/* line 260, main_addProject.scss */
+.addProject-background ul.project-links {
+  float: right;
+  display: block;
+}
+/* line 263, main_addProject.scss */
+.addProject-background ul.project-links li {
+  text-align: right;
+}
+/* line 268, main_addProject.scss */
+.addProject-background main {
+  float: none;
+  clear: both;
+    /*ul.contentTocChildren {
+      & > li &:before {
+        content: '-';
+        font-weight: 500;
+        display: inline-block;
+        font-size: 2rem;
+        color: rgba(0,0,0,0.3);
+        margin-left: 25px;
+      }
+
+      &.nested > li:before {
+        content: '--';
+        font-weight: 500;
+        display: inline-block;
+        font-size: 2rem;
+        color: rgba(0,0,0,0.3);
+        margin-left: 50px;
+      }
+    }*/
+}
+/* line 272, main_addProject.scss */
+.addProject-background main h2 {
+  margin-top: 110px;
+  margin-bottom: 15px;
+  padding-top: 80px;
+  padding-bottom: 15px;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  letter-spacing: 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 283, main_addProject.scss */
+.addProject-background main h2:first-child {
+  margin-top: 250px;
+}
+/* line 285, main_addProject.scss */
+.addProject-background main div.content {
+  margin: 0 auto 2.4rem auto;
+}
+/* line 287, main_addProject.scss */
+.addProject-background main div.content p {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Georgia, serif;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+/* line 297, main_addProject.scss */
+.addProject-background main ul.contentToc {
+  margin-top: 30px;
+}
+/* line 300, main_addProject.scss */
+.addProject-background main ul.contentToc li a {
+  font-size: 1.8rem;
+  display: block;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  font-family: Georgia, serif;
+  /* &:hover {
+     color: #000;
+     span {
+       margin-right: 10px;
+     }
+   }*/
+}
+/* line 315, main_addProject.scss */
+.addProject-background main ul.contentToc li a, .addProject-background main ul.contentToc li a span {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+/* line 317, main_addProject.scss */
+.addProject-background main ul.contentToc li a span {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  margin-right: 5px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+/* line 329, main_addProject.scss */
+.addProject-background main ul.contentTocChildren li a {
+  padding: 10px 5px 10px 40px;
+}
+/* line 330, main_addProject.scss */
+.addProject-background main ul.contentTocChildren.nested li a {
+  padding: 10px 5px 10px 80px;
+}
+
 @font-face {
   font-family: 'calluna';
   src: url("fonts/Calluna/Calluna-Regular.otf");
@@ -9824,8 +10054,16 @@ nav.navBar-tools .navBar--addProject i.fa {
   font-size: 1.8rem;
   cursor: pointer;
   float: left;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
 }
-/* line 129, element_navBar.scss */
+/* line 132, element_navBar.scss */
 nav.navBar-tools .navBar--addProject i.fa:before {
   display: block;
   position: relative;
@@ -9835,7 +10073,7 @@ nav.navBar-tools .navBar--addProject i.fa:before {
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 138, element_navBar.scss */
+/* line 141, element_navBar.scss */
 nav.navBar-tools .navBar--addProject i.fa:after {
   content: 'Add a project';
   display: block;
@@ -9864,8 +10102,40 @@ nav.navBar-tools .navBar--addProject i.fa:after {
   -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
   transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
 }
+/* line 165, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open {
+  background: #3F51B5;
+  height: 50px;
+  border-bottom: 1px solid #3F51B5 !important;
+}
+/* line 169, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open:hover i.fa:before {
+  -webkit-animation: buttonRotation 0.4s ease-out 0.2s backwards;
+  -moz-animation: buttonRotation 0.4s ease-out 0.2s backwards;
+  animation: buttonRotation 0.4s ease-out 0.2s backwards;
+}
+/* line 172, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open i.fa {
+  color: #fff !important;
+  background-color: transparent !important;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  /*@include transform(rotate(45deg));*/
+}
+/* line 177, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open i.fa:before {
+  background-color: transparent !important;
+  border-bottom: 0;
+}
+/* line 181, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open i.fa:after {
+  display: none;
+}
 
-/* line 164, element_navBar.scss */
+/* line 191, element_navBar.scss */
 nav.navBar-tools.hideNav {
   opacity: 0;
   -webkit-transform: translateY(-60px);
@@ -9876,6 +10146,38 @@ nav.navBar-tools.hideNav {
 }
 
 /* ------------------------- */
+@-webkit-keyframes buttonRotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes buttonRotation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes buttonRotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 /* line 13, main.scss */
 html {
   font-size: 62.5%;
@@ -10028,7 +10330,42 @@ body > header .breadcrumb_project {
   transform: translateY(20px);
 }
 
-/* line 137, main.scss */
+/* line 138, main.scss */
+.addProject {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  -webkit-animation: fadeIn 0.2s ease-out 0.2s backwards;
+  -moz-animation: fadeIn 0.2s ease-out 0.2s backwards;
+  animation: fadeIn 0.2s ease-out 0.2s backwards;
+  /*.addProject-content form .input:nth-child(2) { @include animation-delay(0.4s); }*/
+}
+/* line 143, main.scss */
+.addProject.open {
+  opacity: 1;
+}
+/* line 146, main.scss */
+.addProject .addProject-background.open,
+.addProject .addProject-content.open form .input {
+  -webkit-animation: moveUp 0.4s ease-out 0.2s backwards;
+  -moz-animation: moveUp 0.4s ease-out 0.2s backwards;
+  animation: moveUp 0.4s ease-out 0.2s backwards;
+}
+/* line 151, main.scss */
+.addProject .addProject-content.open form .input:first-child {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+/* line 153, main.scss */
+.addProject .addProject-background.open {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+/* line 160, main.scss */
 .projects {
   margin: 50px auto auto auto;
   opacity: 0;
@@ -10037,20 +10374,20 @@ body > header .breadcrumb_project {
   transition: opacity 0.2s ease-out;
 }
 
-/* line 142, main.scss */
+/* line 165, main.scss */
 .projects.open {
   opacity: 1;
   -webkit-animation: fadeIn 0.2s ease-out 0.2s backwards;
   -moz-animation: fadeIn 0.2s ease-out 0.2s backwards;
   animation: fadeIn 0.2s ease-out 0.2s backwards;
 }
-/* line 146, main.scss */
+/* line 169, main.scss */
 .projects.open .project header {
   -webkit-animation: fadeIn 0.2s ease-out 0.2s backwards;
   -moz-animation: fadeIn 0.2s ease-out 0.2s backwards;
   animation: fadeIn 0.2s ease-out 0.2s backwards;
 }
-/* line 150, main.scss */
+/* line 173, main.scss */
 .projects.open .project .project-date,
 .projects.open .project .project-links,
 .projects.open .project main,
@@ -10059,32 +10396,32 @@ body > header .breadcrumb_project {
   -moz-animation: moveUp 0.4s ease-out 0.2s backwards;
   animation: moveUp 0.4s ease-out 0.2s backwards;
 }
-/* line 157, main.scss */
+/* line 180, main.scss */
 .projects.open .project .project-date {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-/* line 158, main.scss */
+/* line 181, main.scss */
 .projects.open .project .project-links {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-/* line 159, main.scss */
+/* line 182, main.scss */
 .projects.open .project main {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-/* line 160, main.scss */
+/* line 183, main.scss */
 .projects.open .project footer {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
-/* line 163, main.scss */
+/* line 186, main.scss */
 .projects .hide {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

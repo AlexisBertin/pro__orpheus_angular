@@ -167,8 +167,16 @@ nav.navBar-tools .navBar--addProject i.fa {
   font-size: 1.8rem;
   cursor: pointer;
   float: left;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
 }
-/* line 129, element_navBar.scss */
+/* line 132, element_navBar.scss */
 nav.navBar-tools .navBar--addProject i.fa:before {
   display: block;
   position: relative;
@@ -178,7 +186,7 @@ nav.navBar-tools .navBar--addProject i.fa:before {
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 138, element_navBar.scss */
+/* line 141, element_navBar.scss */
 nav.navBar-tools .navBar--addProject i.fa:after {
   content: 'Add a project';
   display: block;
@@ -207,8 +215,40 @@ nav.navBar-tools .navBar--addProject i.fa:after {
   -moz-transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
   transition: all 0.4s cubic-bezier(0.39, 0.01, 0.2, 0.98);
 }
+/* line 165, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open {
+  background: #3F51B5;
+  height: 50px;
+  border-bottom: 1px solid #3F51B5 !important;
+}
+/* line 169, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open:hover i.fa:before {
+  -webkit-animation: buttonRotation 0.4s ease-out 0.2s backwards;
+  -moz-animation: buttonRotation 0.4s ease-out 0.2s backwards;
+  animation: buttonRotation 0.4s ease-out 0.2s backwards;
+}
+/* line 172, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open i.fa {
+  color: #fff !important;
+  background-color: transparent !important;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  /*@include transform(rotate(45deg));*/
+}
+/* line 177, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open i.fa:before {
+  background-color: transparent !important;
+  border-bottom: 0;
+}
+/* line 181, element_navBar.scss */
+nav.navBar-tools .navBar--addProject.open i.fa:after {
+  display: none;
+}
 
-/* line 164, element_navBar.scss */
+/* line 191, element_navBar.scss */
 nav.navBar-tools.hideNav {
   opacity: 0;
   -webkit-transform: translateY(-60px);
@@ -219,5 +259,37 @@ nav.navBar-tools.hideNav {
 }
 
 /* ------------------------- */
+@-webkit-keyframes buttonRotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes buttonRotation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes buttonRotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 /*# sourceMappingURL=element_navBar.css.map */
